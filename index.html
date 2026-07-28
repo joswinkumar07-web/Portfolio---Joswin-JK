@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Joswin Kumar, Visual &amp; Branding Designer</title>
 <meta name="description" content="Joswin Kumar, Visual & Branding Designer. 7+ years building brand identity systems, campaigns and digital design for Disney, Microsoft, Logitech, Osmo and more.">
-
-<link rel="icon" type="image/jpeg" href="./assets/forte_poster.jpg">
-
+ 
+<link rel="icon" type="image/jpeg" href="forte_poster.jpg">
+ 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Joswin Kumar, Visual & Branding Designer">
 <meta property="og:description" content="7+ years building brand identity systems, campaigns and digital design for Disney, Microsoft, Logitech, Osmo and more.">
-<meta property="og:image" content="https://YOUR-DOMAIN-HERE.vercel.app/assets/forte_poster.jpg">
+<meta property="og:image" content="https://portfolio-joswin-jk.vercel.app/forte_poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Joswin Kumar, Visual & Branding Designer">
 <meta name="twitter:description" content="7+ years building brand identity systems, campaigns and digital design for Disney, Microsoft, Logitech, Osmo and more.">
-<meta name="twitter:image" content="https://YOUR-DOMAIN-HERE.vercel.app/assets/forte_poster.jpg">
-
+<meta name="twitter:image" content="https://portfolio-joswin-jk.vercel.app/forte_poster.jpg">
+ 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+ 
 <style>
   :root{
     --bg:#0b0b0a;
@@ -36,11 +36,11 @@
     --ease:cubic-bezier(.16,.8,.24,1);        /* strong ease-out, entrances */
     --ease-in-out:cubic-bezier(.77,0,.175,1); /* strong ease-in-out, on-screen movement */
   }
-
+ 
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   ::selection{background:var(--accent);color:#0b0b0a;}
-
+ 
   body{
     background:var(--bg);
     color:var(--ink);
@@ -48,10 +48,10 @@
     font-weight:300;
     overflow-x:hidden;
   }
-
+ 
   a{color:inherit;text-decoration:none;}
   img{display:block;max-width:100%;}
-
+ 
   .eyebrow{
     font-family:'IBM Plex Mono',monospace;
     font-size:12px;
@@ -59,23 +59,23 @@
     text-transform:uppercase;
     color:var(--accent);
   }
-
+ 
   h1,h2,h3{
     font-family:'Space Grotesk',sans-serif;
     font-weight:500;
     letter-spacing:-.02em;
     line-height:1.02;
   }
-
+ 
   .wrap{max-width:1240px;margin:0 auto;padding:0 40px;}
   @media (max-width:720px){ .wrap{padding:0 22px;} }
-
+ 
   /* ---------- noise/gradient bg for hero ---------- */
   .grain{
     position:absolute; inset:0; pointer-events:none; opacity:.05; mix-blend-mode:overlay; z-index:2;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-
+ 
   /* ---------- nav ---------- */
   header{
     position:fixed; top:0; left:0; right:0; z-index:100;
@@ -94,7 +94,7 @@
   }
   .nav-mobile-hide{display:flex;}
   @media (max-width:640px){ .nav-mobile-hide{display:none;} }
-
+ 
   /* ---------- hero ---------- */
   .hero{
     position:relative; min-height:100svh;
@@ -103,7 +103,7 @@
     overflow:hidden;
   }
   @media (max-width:720px){ .hero{padding:120px 22px 50px;} }
-
+ 
   .hero-media{position:absolute; inset:0; z-index:0; overflow:hidden; background:#0b0b0a;}
   .hero-media video{
     position:absolute; top:50%; left:50%; min-width:100%; min-height:100%;
@@ -116,7 +116,7 @@
       linear-gradient(180deg, rgba(11,11,10,.35) 0%, rgba(11,11,10,.6) 55%, rgba(11,11,10,.94) 100%),
       radial-gradient(ellipse 900px 600px at 78% 15%, rgba(11,11,10,.1) 0%, rgba(11,11,10,.55) 65%);
   }
-
+ 
   .hero-content{position:relative; z-index:3;}
   .hero-content > *{opacity:0; transform:translateY(16px); animation:heroIn .8s var(--ease) forwards;}
   .hero-content > *:nth-child(1){animation-delay:.05s;}
@@ -127,26 +127,26 @@
   .hero .eyebrow{margin-bottom:22px; display:flex; align-items:center; gap:10px;}
   .hero .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite;}
   @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
-
+ 
   .hero h1{
     font-size:clamp(52px,10vw,132px);
     color:var(--ink);
   }
   .hero h1 .last{color:var(--ink-faint); -webkit-text-stroke:1px var(--ink-dim); color:transparent;}
-
+ 
   .hero-sub{
     margin-top:28px; max-width:560px;
     font-size:18px; line-height:1.6; color:var(--ink-dim); font-weight:300;
   }
   .hero-sub b{color:var(--ink); font-weight:500;}
-
+ 
   .hero-meta{
     margin-top:56px; display:flex; gap:56px; flex-wrap:wrap;
     padding-top:26px; border-top:1px solid var(--line);
   }
   .hero-meta div{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); letter-spacing:.05em;}
   .hero-meta div span{display:block; margin-top:6px; font-family:'Inter',sans-serif; font-size:14px; color:var(--ink); font-weight:400;}
-
+ 
   .hero-credit{
     position:absolute; bottom:36px; right:40px; z-index:3;
     font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase;
@@ -154,7 +154,7 @@
   }
   .hero-credit b{color:var(--ink); font-weight:500;}
   @media (max-width:720px){ .hero-credit{right:22px; bottom:22px; font-size:9px;} }
-
+ 
   /* ---------- marquee band ---------- */
   .marquee-band{
     border-top:1px solid var(--line); border-bottom:1px solid var(--line);
@@ -169,18 +169,18 @@
   .marquee-track span::after{content:'/'; color:var(--accent); margin:0 2px;}
   @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
   @media (prefers-reduced-motion:reduce){ .marquee-track{animation:none;} }
-
+ 
   /* ---------- reveal ---------- */
   .reveal{opacity:0; transform:translateY(28px); transition:opacity .9s var(--ease), transform .9s var(--ease);}
   .reveal.in{opacity:1; transform:translateY(0);}
-
+ 
   /* ---------- section shell ---------- */
   section{position:relative; padding:130px 0;}
   @media (max-width:720px){ section{padding:90px 0;} }
   .section-head{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:64px; gap:24px; flex-wrap:wrap;}
   .section-head h2{font-size:clamp(34px,5vw,58px);}
   .section-head p{max-width:340px; color:var(--ink-dim); font-size:14px; line-height:1.6;}
-
+ 
   /* ---------- about ---------- */
   .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:80px;}
   @media (max-width:860px){ .about-grid{grid-template-columns:1fr; gap:48px;} }
@@ -191,7 +191,7 @@
     display:flex; align-items:center; gap:14px; font-size:13px; color:var(--ink-dim);
   }
   .about-text .award b{color:var(--accent);}
-
+ 
   .timeline{border-left:1px solid var(--line); padding-left:32px; display:flex; flex-direction:column; gap:34px;}
   .timeline-item{position:relative;}
   .timeline-item::before{content:'';position:absolute; left:-37px; top:6px; width:9px;height:9px;border-radius:50%; background:var(--bg); border:1px solid var(--accent);}
@@ -200,7 +200,7 @@
   .timeline-item .company{font-size:13px; color:var(--accent); margin-top:2px;}
   .timeline-item .period{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); margin-top:6px;}
   .timeline-item .desc{font-size:14px; color:var(--ink-dim); margin-top:10px; line-height:1.6; max-width:440px;}
-
+ 
   /* ---------- work ---------- */
   .project{
     border-top:1px solid var(--line);
@@ -226,7 +226,7 @@
   .chevron svg{width:12px;height:12px;}
   .chevron path{stroke:var(--ink);}
   .project.open .chevron path{stroke:#0b0b0a;}
-
+ 
   .project-body{
     display:grid; grid-template-rows:0fr; transition:grid-template-rows .45s var(--ease-in-out);
   }
@@ -255,7 +255,7 @@
   .gallery > *:nth-child(4){transition-delay:.2s;}
   .gallery > *:nth-child(5){transition-delay:.25s;}
   .gallery .wide{grid-column:1/-1;}
-
+ 
   /* ---------- mockup presentation ---------- */
   .mockup-browser{
     border-radius:8px; overflow:hidden; border:1px solid var(--line);
@@ -272,7 +272,7 @@
     background:#0f0e0a; border-radius:20px; padding:5px 14px; text-align:center; letter-spacing:.02em;
   }
   .mockup-browser img{width:100%; display:block; border:0; border-radius:0; opacity:1 !important; transform:none !important;}
-
+ 
   .mockup-frame{
     padding:16px; background:#141310; border:1px solid var(--line); border-radius:6px;
     box-shadow:0 30px 70px -25px rgba(0,0,0,.6);
@@ -283,11 +283,11 @@
     letter-spacing:.06em; text-transform:uppercase; display:flex; justify-content:space-between;
   }
   .mockup-frame .cap b{color:var(--ink-dim); font-weight:400;}
-
+ 
   .plain-cap{margin-top:10px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); letter-spacing:.06em; text-transform:uppercase;}
   .role-tags{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:22px;}
   .role-tag{font-family:'IBM Plex Mono',monospace; font-size:10px; padding:6px 10px; border:1px solid var(--line); border-radius:20px; color:var(--ink-dim); letter-spacing:.05em;}
-
+ 
   /* ---------- skills ---------- */
   .skills-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:40px;}
   @media (max-width:780px){ .skills-grid{grid-template-columns:1fr; gap:36px;} }
@@ -300,7 +300,7 @@
   @media (hover:hover) and (pointer:fine){
     .skill-pill:hover{border-color:var(--accent); color:var(--ink); background:var(--accent-dim);}
   }
-
+ 
   /* ---------- contact ---------- */
   .contact{text-align:left;}
   .contact h2{font-size:clamp(38px,7vw,88px); max-width:820px;}
@@ -315,13 +315,13 @@
     .contact-link:hover{border-color:var(--accent); color:var(--accent);}
   }
   .contact-link svg{width:14px;height:14px;}
-
+ 
   footer{
     border-top:1px solid var(--line); padding:32px 0;
     display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
     font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint);
   }
-
+ 
   .btn-resume{
     font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase;
     padding:10px 18px; border:1px solid var(--ink); border-radius:20px; color:var(--ink);
@@ -330,7 +330,7 @@
   @media (hover:hover) and (pointer:fine){
     .btn-resume:hover{background:var(--ink); color:#0b0b0a;}
   }
-
+ 
   @media (prefers-reduced-motion:reduce){
     /* remove movement and infinite/looping animation, keep opacity & color feedback */
     .dot, .grain, .marquee-track{animation:none !important;}
@@ -339,12 +339,12 @@
     .hero-content > *{animation:none !important; opacity:1; transform:none;}
     .gallery img, .gallery video{transform:none; transition:opacity .2s ease; transition-delay:0s !important;}
   }
-
+ 
   a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
 </style>
 </head>
 <body>
-
+ 
 <header>
   <div class="logo">JK<span style="color:var(--accent)">.</span></div>
   <nav class="nav-mobile-hide">
@@ -353,14 +353,14 @@
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
-  <a href="./assets/resume.pdf" class="btn-resume" download>Résumé</a>
+  <a href="resume.pdf" class="btn-resume" download>Résumé</a>
 </header>
-
+ 
 <!-- ============ HERO ============ -->
 <section class="hero" style="padding-top:140px;">
   <div class="hero-media">
-    <video autoplay muted loop playsinline poster="./assets/forte_poster.jpg" id="heroVideo">
-      <source src="./assets/forte_motion.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline poster="forte_poster.jpg" id="heroVideo">
+      <source src="forte_motion.mp4" type="video/mp4">
     </video>
   </div>
   <div class="hero-overlay"></div>
@@ -377,14 +377,14 @@
   </div>
   <div class="hero-credit">Featured work<br><b>Forte Series</b>, Campaign Film</div>
 </section>
-
+ 
 <div class="marquee-band" aria-hidden="true">
   <div class="marquee-track">
     <span><b>Brand Identity</b></span><span><b>Campaign Design</b></span><span><b>Visual Strategy</b></span><span><b>UX Audits</b></span><span><b>Motion</b></span><span><b>Disney</b></span><span><b>Microsoft</b></span><span><b>Logitech</b></span>
     <span><b>Brand Identity</b></span><span><b>Campaign Design</b></span><span><b>Visual Strategy</b></span><span><b>UX Audits</b></span><span><b>Motion</b></span><span><b>Disney</b></span><span><b>Microsoft</b></span><span><b>Logitech</b></span>
   </div>
 </div>
-
+ 
 <!-- ============ WORK ============ -->
 <section id="work">
   <div class="wrap">
@@ -392,7 +392,7 @@
       <h2>Selected<br>Work</h2>
       <p>Every one of these started as someone else's problem and a blank page. Here's how each found its shape, from 2021 to 2026.</p>
     </div>
-
+ 
     <!-- 01 Branding Portfolio -->
     <div class="project reveal" data-project>
       <div class="project-row">
@@ -413,15 +413,15 @@
           <div class="story-item"><span class="story-label">Outcome</span><p>Six ready-to-run brand systems, each handed off with usage rules a founder without a design team could actually follow.</p></div>
         </div>
         <div class="gallery">
-          <div class="mockup-frame wide"><img src="./assets/branding_cover.jpg" alt="Branding portfolio cover"><div class="cap"><span>Portfolio deck</span><b>Cover</b></div></div>
-          <div class="mockup-frame"><img src="./assets/branding_hiroscope.jpg" alt="Hiroscope.ai brand system"><div class="cap"><span>Brand system</span><b>Hiroscope.ai</b></div></div>
-          <div class="mockup-frame"><img src="./assets/branding_tiffyn.jpg" alt="Tiffyn brand system"><div class="cap"><span>Brand system</span><b>Tiffyn</b></div></div>
-          <div class="mockup-frame"><img src="./assets/branding_talenzap.jpg" alt="Talenzap brand system"><div class="cap"><span>Brand system</span><b>Talenzap</b></div></div>
-          <div class="mockup-frame"><img src="./assets/branding_realmagic.jpg" alt="Real Magic brand system"><div class="cap"><span>Brand system</span><b>Real Magic</b></div></div>
+          <div class="mockup-frame wide"><img src="branding_cover.jpg" alt="Branding portfolio cover"><div class="cap"><span>Portfolio deck</span><b>Cover</b></div></div>
+          <div class="mockup-frame"><img src="branding_hiroscope.jpg" alt="Hiroscope.ai brand system"><div class="cap"><span>Brand system</span><b>Hiroscope.ai</b></div></div>
+          <div class="mockup-frame"><img src="branding_tiffyn.jpg" alt="Tiffyn brand system"><div class="cap"><span>Brand system</span><b>Tiffyn</b></div></div>
+          <div class="mockup-frame"><img src="branding_talenzap.jpg" alt="Talenzap brand system"><div class="cap"><span>Brand system</span><b>Talenzap</b></div></div>
+          <div class="mockup-frame"><img src="branding_realmagic.jpg" alt="Real Magic brand system"><div class="cap"><span>Brand system</span><b>Real Magic</b></div></div>
         </div>
       </div></div>
     </div>
-
+ 
     <!-- 02 Fleetconnect -->
     <div class="project reveal" data-project>
       <div class="project-row">
@@ -441,13 +441,13 @@
           <div class="story-item"><span class="story-label">Outcome</span><p>A branding strategy deck the product and design teams could align around before the next build sprint.</p></div>
         </div>
         <div class="gallery">
-          <div class="mockup-frame wide"><img src="./assets/fleetconnect_cover.jpg" alt="Fleetconnect deck cover"><div class="cap"><span>Strategy deck</span><b>Cover</b></div></div>
-          <div class="mockup-frame"><img src="./assets/fleetconnect_typography.jpg" alt="Fleetconnect typography recommendation"><div class="cap"><span>Recommendation</span><b>Typography</b></div></div>
-          <div class="mockup-frame"><img src="./assets/fleetconnect_layout.jpg" alt="Fleetconnect layout recommendation"><div class="cap"><span>Recommendation</span><b>Layout</b></div></div>
+          <div class="mockup-frame wide"><img src="fleetconnect_cover.jpg" alt="Fleetconnect deck cover"><div class="cap"><span>Strategy deck</span><b>Cover</b></div></div>
+          <div class="mockup-frame"><img src="fleetconnect_typography.jpg" alt="Fleetconnect typography recommendation"><div class="cap"><span>Recommendation</span><b>Typography</b></div></div>
+          <div class="mockup-frame"><img src="fleetconnect_layout.jpg" alt="Fleetconnect layout recommendation"><div class="cap"><span>Recommendation</span><b>Layout</b></div></div>
         </div>
       </div></div>
     </div>
-
+ 
     <!-- 03 Forte Series -->
     <div class="project reveal" data-project>
       <div class="project-row">
@@ -467,15 +467,15 @@
           <div class="story-item"><span class="story-label">Outcome</span><p>A launch-ready poster system shown across subway, storefront and mobile placements, extended into a vertical motion cut for social.</p></div>
         </div>
         <div class="gallery">
-          <div class="wide"><img src="./assets/forte_subway.jpg" alt="Forte Series subway ad mockup"><div class="plain-cap">Subway placement</div></div>
-          <div class="mockup-frame"><img src="./assets/forte_poster.jpg" alt="Forte Series static poster"><div class="cap"><span>Artwork</span><b>Static poster</b></div></div>
-          <div><img src="./assets/forte_iphone.jpg" alt="Forte Series mobile mockup"><div class="plain-cap">Mobile mockup</div></div>
-          <div><img src="./assets/forte_aframe.jpg" alt="Forte Series A-frame mockup"><div class="plain-cap">A-frame mockup</div></div>
-          <div class="wide"><video src="./assets/forte_motion.mp4" autoplay muted loop playsinline controls></video><div class="plain-cap">Motion poster</div></div>
+          <div class="wide"><img src="forte_subway.jpg" alt="Forte Series subway ad mockup"><div class="plain-cap">Subway placement</div></div>
+          <div class="mockup-frame"><img src="forte_poster.jpg" alt="Forte Series static poster"><div class="cap"><span>Artwork</span><b>Static poster</b></div></div>
+          <div><img src="forte_iphone.jpg" alt="Forte Series mobile mockup"><div class="plain-cap">Mobile mockup</div></div>
+          <div><img src="forte_aframe.jpg" alt="Forte Series A-frame mockup"><div class="plain-cap">A-frame mockup</div></div>
+          <div class="wide"><video src="forte_motion.mp4" autoplay muted loop playsinline controls></video><div class="plain-cap">Motion poster</div></div>
         </div>
       </div></div>
     </div>
-
+ 
     <!-- 04 Pepperfry -->
     <div class="project reveal" data-project>
       <div class="project-row">
@@ -497,16 +497,16 @@
         <div class="gallery">
           <div class="mockup-browser wide">
             <div class="bar"><div class="dots"><span></span><span></span><span></span></div><div class="url">pepperfry.com</div></div>
-            <img src="./assets/pepperfry_homepage.jpg" alt="Pepperfry homepage audit">
+            <img src="pepperfry_homepage.jpg" alt="Pepperfry homepage audit">
           </div>
           <div class="mockup-browser wide">
             <div class="bar"><div class="dots"><span></span><span></span><span></span></div><div class="url">pepperfry.com/checkout</div></div>
-            <img src="./assets/pepperfry_checkout.jpg" alt="Pepperfry checkout flow audit">
+            <img src="pepperfry_checkout.jpg" alt="Pepperfry checkout flow audit">
           </div>
         </div>
       </div></div>
     </div>
-
+ 
     <!-- 05 RadBeauty -->
     <div class="project reveal" data-project>
       <div class="project-row">
@@ -526,12 +526,12 @@
           <div class="story-item"><span class="story-label">Outcome</span><p>Launch-ready creative delivered across social and out-of-home formats.</p></div>
         </div>
         <div class="gallery">
-          <div class="mockup-frame wide"><img src="./assets/radbeauty_1.jpg" alt="RadBeauty campaign and billboard"><div class="cap"><span>Campaign</span><b>Social and billboard</b></div></div>
-          <div class="mockup-frame wide"><img src="./assets/radbeauty_2.jpg" alt="RadBeauty app promo"><div class="cap"><span>Campaign</span><b>App promo</b></div></div>
+          <div class="mockup-frame wide"><img src="radbeauty_1.jpg" alt="RadBeauty campaign and billboard"><div class="cap"><span>Campaign</span><b>Social and billboard</b></div></div>
+          <div class="mockup-frame wide"><img src="radbeauty_2.jpg" alt="RadBeauty app promo"><div class="cap"><span>Campaign</span><b>App promo</b></div></div>
         </div>
       </div></div>
     </div>
-
+ 
     <!-- 06 MBRDI -->
     <div class="project reveal" data-project>
       <div class="project-row">
@@ -551,13 +551,13 @@
           <div class="story-item"><span class="story-label">Outcome</span><p>A presentation used to introduce MBRDI's mission across engineering, IT and product teams.</p></div>
         </div>
         <div class="gallery">
-          <div class="mockup-frame wide"><img src="./assets/mbrdi_1.jpg" alt="MBRDI presentation intro"><div class="cap"><span>Presentation</span><b>Intro</b></div></div>
-          <div class="mockup-frame"><img src="./assets/mbrdi_2.jpg" alt="MBRDI presentation sections"><div class="cap"><span>Presentation</span><b>Sections</b></div></div>
-          <div class="mockup-frame"><img src="./assets/mbrdi_3.jpg" alt="MBRDI presentation closing"><div class="cap"><span>Presentation</span><b>Closing</b></div></div>
+          <div class="mockup-frame wide"><img src="mbrdi_1.jpg" alt="MBRDI presentation intro"><div class="cap"><span>Presentation</span><b>Intro</b></div></div>
+          <div class="mockup-frame"><img src="mbrdi_2.jpg" alt="MBRDI presentation sections"><div class="cap"><span>Presentation</span><b>Sections</b></div></div>
+          <div class="mockup-frame"><img src="mbrdi_3.jpg" alt="MBRDI presentation closing"><div class="cap"><span>Presentation</span><b>Closing</b></div></div>
         </div>
       </div></div>
     </div>
-
+ 
     <!-- 07 Fly Realty -->
     <div class="project reveal" data-project>
       <div class="project-row">
@@ -577,14 +577,14 @@
           <div class="story-item"><span class="story-label">Outcome</span><p>Campaign creative delivered for print and digital placement.</p></div>
         </div>
         <div class="gallery">
-          <div class="mockup-frame wide"><img src="./assets/flyrealty_1.jpg" alt="Fly Realty campaign ad"><div class="cap"><span>Campaign</span><b>Print and digital ad</b></div></div>
+          <div class="mockup-frame wide"><img src="flyrealty_1.jpg" alt="Fly Realty campaign ad"><div class="cap"><span>Campaign</span><b>Print and digital ad</b></div></div>
         </div>
       </div></div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- ============ ABOUT ============ -->
 <section id="about">
   <div class="wrap">
@@ -629,7 +629,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ============ SKILLS ============ -->
 <section id="skills">
   <div class="wrap">
@@ -659,7 +659,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ============ CONTACT ============ -->
 <section id="contact" class="contact">
   <div class="wrap">
@@ -672,12 +672,12 @@
     </div>
   </div>
 </section>
-
+ 
 <footer class="wrap">
   <div>© 2026 Joswin Kumar</div>
   <div>Bengaluru, India. Open to relocation.</div>
 </footer>
-
+ 
 <script>
   // hero video: respect reduced motion, pause and show poster frame
   const heroVideo = document.getElementById('heroVideo');
@@ -685,7 +685,7 @@
     heroVideo.removeAttribute('autoplay');
     heroVideo.pause();
   }
-
+ 
   // scroll reveal
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(en=>{
@@ -693,7 +693,7 @@
     });
   }, {threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
-
+ 
   // project accordion
   document.querySelectorAll('[data-project]').forEach(p=>{
     p.querySelector('.project-row').addEventListener('click', ()=>{
@@ -703,6 +703,6 @@
     });
   });
 </script>
-
+ 
 </body>
 </html>
