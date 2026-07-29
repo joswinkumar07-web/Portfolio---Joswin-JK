@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Joswin Kumar, Visual &amp; Branding Designer</title>
 <meta name="description" content="Joswin Kumar, Visual & Branding Designer. 7+ years building brand identity systems, campaigns and digital design for Disney, Microsoft, Logitech, Osmo and more.">
- 
+
 <link rel="icon" type="image/jpeg" href="forte_poster.jpg">
- 
+
 <meta property="og:type" content="website">
 <meta property="og:title" content="Joswin Kumar, Visual & Branding Designer">
 <meta property="og:description" content="7+ years building brand identity systems, campaigns and digital design for Disney, Microsoft, Logitech, Osmo and more.">
-<meta property="og:image" content="https://portfolio-joswin-jk.vercel.app/forte_poster.jpg">
+<meta property="og:image" content="https://YOUR-DOMAIN-HERE.vercel.app/assets/forte_poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Joswin Kumar, Visual & Branding Designer">
 <meta name="twitter:description" content="7+ years building brand identity systems, campaigns and digital design for Disney, Microsoft, Logitech, Osmo and more.">
-<meta name="twitter:image" content="https://portfolio-joswin-jk.vercel.app/forte_poster.jpg">
- 
+<meta name="twitter:image" content="https://YOUR-DOMAIN-HERE.vercel.app/assets/forte_poster.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
- 
+
 <style>
   :root{
     --bg:#0b0b0a;
@@ -36,11 +36,11 @@
     --ease:cubic-bezier(.16,.8,.24,1);        /* strong ease-out, entrances */
     --ease-in-out:cubic-bezier(.77,0,.175,1); /* strong ease-in-out, on-screen movement */
   }
- 
+
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   ::selection{background:var(--accent);color:#0b0b0a;}
- 
+
   body{
     background:var(--bg);
     color:var(--ink);
@@ -48,10 +48,10 @@
     font-weight:300;
     overflow-x:hidden;
   }
- 
+
   a{color:inherit;text-decoration:none;}
   img{display:block;max-width:100%;}
- 
+
   .eyebrow{
     font-family:'IBM Plex Mono',monospace;
     font-size:12px;
@@ -59,23 +59,23 @@
     text-transform:uppercase;
     color:var(--accent);
   }
- 
+
   h1,h2,h3{
     font-family:'Space Grotesk',sans-serif;
     font-weight:500;
     letter-spacing:-.02em;
     line-height:1.02;
   }
- 
+
   .wrap{max-width:1240px;margin:0 auto;padding:0 40px;}
   @media (max-width:720px){ .wrap{padding:0 22px;} }
- 
+
   /* ---------- noise/gradient bg for hero ---------- */
   .grain{
     position:absolute; inset:0; pointer-events:none; opacity:.05; mix-blend-mode:overlay; z-index:2;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
- 
+
   /* ---------- nav ---------- */
   header{
     position:fixed; top:0; left:0; right:0; z-index:100;
@@ -94,7 +94,7 @@
   }
   .nav-mobile-hide{display:flex;}
   @media (max-width:640px){ .nav-mobile-hide{display:none;} }
- 
+
   /* ---------- hero ---------- */
   .hero{
     position:relative; min-height:100svh;
@@ -103,7 +103,7 @@
     overflow:hidden;
   }
   @media (max-width:720px){ .hero{padding:120px 22px 50px;} }
- 
+
   .hero-media{position:absolute; inset:0; z-index:0; overflow:hidden; background:#0b0b0a;}
   .hero-media video{
     position:absolute; top:50%; left:50%; min-width:100%; min-height:100%;
@@ -116,7 +116,7 @@
       linear-gradient(180deg, rgba(11,11,10,.35) 0%, rgba(11,11,10,.6) 55%, rgba(11,11,10,.94) 100%),
       radial-gradient(ellipse 900px 600px at 78% 15%, rgba(11,11,10,.1) 0%, rgba(11,11,10,.55) 65%);
   }
- 
+
   .hero-content{position:relative; z-index:3;}
   .hero-content > *{opacity:0; transform:translateY(16px); animation:heroIn .8s var(--ease) forwards;}
   .hero-content > *:nth-child(1){animation-delay:.05s;}
@@ -127,26 +127,26 @@
   .hero .eyebrow{margin-bottom:22px; display:flex; align-items:center; gap:10px;}
   .hero .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite;}
   @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
- 
+
   .hero h1{
     font-size:clamp(52px,10vw,132px);
     color:var(--ink);
   }
   .hero h1 .last{color:var(--ink-faint); -webkit-text-stroke:1px var(--ink-dim); color:transparent;}
- 
+
   .hero-sub{
     margin-top:28px; max-width:560px;
     font-size:18px; line-height:1.6; color:var(--ink-dim); font-weight:300;
   }
   .hero-sub b{color:var(--ink); font-weight:500;}
- 
+
   .hero-meta{
     margin-top:56px; display:flex; gap:56px; flex-wrap:wrap;
     padding-top:26px; border-top:1px solid var(--line);
   }
   .hero-meta div{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); letter-spacing:.05em;}
   .hero-meta div span{display:block; margin-top:6px; font-family:'Inter',sans-serif; font-size:14px; color:var(--ink); font-weight:400;}
- 
+
   .hero-credit{
     position:absolute; bottom:36px; right:40px; z-index:3;
     font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase;
@@ -154,7 +154,7 @@
   }
   .hero-credit b{color:var(--ink); font-weight:500;}
   @media (max-width:720px){ .hero-credit{right:22px; bottom:22px; font-size:9px;} }
- 
+
   /* ---------- marquee band ---------- */
   .marquee-band{
     border-top:1px solid var(--line); border-bottom:1px solid var(--line);
@@ -169,18 +169,18 @@
   .marquee-track span::after{content:'/'; color:var(--accent); margin:0 2px;}
   @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
   @media (prefers-reduced-motion:reduce){ .marquee-track{animation:none;} }
- 
+
   /* ---------- reveal ---------- */
   .reveal{opacity:0; transform:translateY(28px); transition:opacity .9s var(--ease), transform .9s var(--ease);}
   .reveal.in{opacity:1; transform:translateY(0);}
- 
+
   /* ---------- section shell ---------- */
   section{position:relative; padding:130px 0;}
   @media (max-width:720px){ section{padding:90px 0;} }
   .section-head{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:64px; gap:24px; flex-wrap:wrap;}
   .section-head h2{font-size:clamp(34px,5vw,58px);}
   .section-head p{max-width:340px; color:var(--ink-dim); font-size:14px; line-height:1.6;}
- 
+
   /* ---------- about ---------- */
   .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:80px;}
   @media (max-width:860px){ .about-grid{grid-template-columns:1fr; gap:48px;} }
@@ -191,7 +191,7 @@
     display:flex; align-items:center; gap:14px; font-size:13px; color:var(--ink-dim);
   }
   .about-text .award b{color:var(--accent);}
- 
+
   .timeline{border-left:1px solid var(--line); padding-left:32px; display:flex; flex-direction:column; gap:34px;}
   .timeline-item{position:relative;}
   .timeline-item::before{content:'';position:absolute; left:-37px; top:6px; width:9px;height:9px;border-radius:50%; background:var(--bg); border:1px solid var(--accent);}
@@ -200,7 +200,7 @@
   .timeline-item .company{font-size:13px; color:var(--accent); margin-top:2px;}
   .timeline-item .period{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); margin-top:6px;}
   .timeline-item .desc{font-size:14px; color:var(--ink-dim); margin-top:10px; line-height:1.6; max-width:440px;}
- 
+
   /* ---------- work ---------- */
   .project{
     border-top:1px solid var(--line);
@@ -226,7 +226,7 @@
   .chevron svg{width:12px;height:12px;}
   .chevron path{stroke:var(--ink);}
   .project.open .chevron path{stroke:#0b0b0a;}
- 
+
   .project-body{
     display:grid; grid-template-rows:0fr; transition:grid-template-rows .45s var(--ease-in-out);
   }
@@ -240,6 +240,77 @@
   .story-label{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); padding-top:2px;}
   .story-item p{font-size:15px; line-height:1.7; color:var(--ink-dim);}
   .story-item p b{color:var(--ink); font-weight:500;}
+
+  /* ---------- filter tabs ---------- */
+  .filters{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:48px;}
+  .filter-btn{
+    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+    padding:9px 16px; border:1px solid var(--line); border-radius:20px; color:var(--ink-dim);
+    background:none; cursor:pointer; transition:border-color .2s ease, color .2s ease, background-color .2s ease;
+  }
+  .filter-btn.active{border-color:var(--accent); color:var(--accent); background:var(--accent-dim);}
+  @media (hover:hover) and (pointer:fine){
+    .filter-btn:hover{border-color:var(--ink-dim); color:var(--ink);}
+  }
+  .project.filtered-out{display:none;}
+
+  /* ---------- meta line + featured badge ---------- */
+  .project-meta-line{
+    display:flex; gap:14px; align-items:center; margin-top:10px;
+    font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); letter-spacing:.04em; text-transform:uppercase;
+  }
+  .project-meta-line span{white-space:nowrap;}
+  .featured-badge{
+    font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--accent); border:1px solid var(--accent); border-radius:20px; padding:3px 9px;
+  }
+
+  /* ---------- what I do (narrative pillars) ---------- */
+  .pillars{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  @media (max-width:860px){ .pillars{grid-template-columns:1fr;} }
+  .pillar{background:var(--bg); padding:40px 32px;}
+  .pillar .num{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--accent); margin-bottom:18px;}
+  .pillar h3{font-size:24px; margin-bottom:14px;}
+  .pillar p{font-size:14px; line-height:1.7; color:var(--ink-dim); margin-bottom:16px;}
+  .pillar .pillar-ex{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); letter-spacing:.04em; text-transform:uppercase;}
+
+  /* ---------- pin modal ---------- */
+  .pin-overlay{
+    position:fixed; inset:0; z-index:1000; background:rgba(11,11,10,.85); backdrop-filter:blur(6px);
+    display:flex; align-items:center; justify-content:center; padding:24px;
+    opacity:0; pointer-events:none; transition:opacity .3s var(--ease);
+  }
+  .pin-overlay.show{opacity:1; pointer-events:auto;}
+  .pin-dialog{
+    background:var(--bg-elev); border:1px solid var(--line); border-radius:6px; padding:40px 36px;
+    max-width:380px; width:100%; text-align:center;
+    transform:translateY(12px); transition:transform .3s var(--ease);
+  }
+  .pin-overlay.show .pin-dialog{transform:none;}
+  .pin-dialog .lock-icon{font-size:22px; margin-bottom:16px;}
+  .pin-dialog h3{font-size:19px; margin-bottom:8px;}
+  .pin-dialog p{font-size:13px; color:var(--ink-dim); margin-bottom:24px; line-height:1.6;}
+  .pin-input-row{display:flex; gap:8px;}
+  .pin-input{
+    flex:1; background:var(--bg); border:1px solid var(--line); border-radius:4px; color:var(--ink);
+    font-family:'IBM Plex Mono',monospace; font-size:16px; letter-spacing:.3em; text-align:center; padding:12px;
+    outline:none;
+  }
+  .pin-input:focus{border-color:var(--accent);}
+  .pin-submit{
+    background:var(--accent); color:#0b0b0a; border:none; border-radius:4px; padding:0 18px;
+    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.05em; text-transform:uppercase; cursor:pointer;
+  }
+  .pin-error{color:#e05a4a; font-size:12px; margin-top:12px; height:14px; opacity:0; transition:opacity .2s ease;}
+  .pin-error.show{opacity:1;}
+  .pin-dialog.shake{animation:shake .4s;}
+  @keyframes shake{20%{transform:translateX(-6px);}40%{transform:translateX(6px);}60%{transform:translateX(-4px);}80%{transform:translateX(4px);}100%{transform:translateX(0);}}
+  .pin-close{margin-top:18px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); background:none; border:none; cursor:pointer; text-decoration:underline;}
+  .lock-badge{
+    font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--ink-faint); border:1px solid var(--line); border-radius:20px; padding:3px 9px; display:inline-flex; align-items:center; gap:4px;
+  }
+  @media (prefers-reduced-motion:reduce){ .pin-dialog.shake{animation:none;} }
   .gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px;}
   .gallery img, .gallery video, .gallery .mockup-browser, .gallery .mockup-frame{
     width:100%; border-radius:var(--radius); border:1px solid var(--line);
@@ -255,7 +326,7 @@
   .gallery > *:nth-child(4){transition-delay:.2s;}
   .gallery > *:nth-child(5){transition-delay:.25s;}
   .gallery .wide{grid-column:1/-1;}
- 
+
   /* ---------- mockup presentation ---------- */
   .mockup-browser{
     border-radius:8px; overflow:hidden; border:1px solid var(--line);
@@ -272,7 +343,7 @@
     background:#0f0e0a; border-radius:20px; padding:5px 14px; text-align:center; letter-spacing:.02em;
   }
   .mockup-browser img{width:100%; display:block; border:0; border-radius:0; opacity:1 !important; transform:none !important;}
- 
+
   .mockup-frame{
     padding:16px; background:#141310; border:1px solid var(--line); border-radius:6px;
     box-shadow:0 30px 70px -25px rgba(0,0,0,.6);
@@ -283,11 +354,11 @@
     letter-spacing:.06em; text-transform:uppercase; display:flex; justify-content:space-between;
   }
   .mockup-frame .cap b{color:var(--ink-dim); font-weight:400;}
- 
+
   .plain-cap{margin-top:10px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); letter-spacing:.06em; text-transform:uppercase;}
   .role-tags{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:22px;}
   .role-tag{font-family:'IBM Plex Mono',monospace; font-size:10px; padding:6px 10px; border:1px solid var(--line); border-radius:20px; color:var(--ink-dim); letter-spacing:.05em;}
- 
+
   /* ---------- skills ---------- */
   .skills-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:40px;}
   @media (max-width:780px){ .skills-grid{grid-template-columns:1fr; gap:36px;} }
@@ -300,7 +371,7 @@
   @media (hover:hover) and (pointer:fine){
     .skill-pill:hover{border-color:var(--accent); color:var(--ink); background:var(--accent-dim);}
   }
- 
+
   /* ---------- contact ---------- */
   .contact{text-align:left;}
   .contact h2{font-size:clamp(38px,7vw,88px); max-width:820px;}
@@ -315,13 +386,13 @@
     .contact-link:hover{border-color:var(--accent); color:var(--accent);}
   }
   .contact-link svg{width:14px;height:14px;}
- 
+
   footer{
     border-top:1px solid var(--line); padding:32px 0;
     display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
     font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint);
   }
- 
+
   .btn-resume{
     font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase;
     padding:10px 18px; border:1px solid var(--ink); border-radius:20px; color:var(--ink);
@@ -330,7 +401,7 @@
   @media (hover:hover) and (pointer:fine){
     .btn-resume:hover{background:var(--ink); color:#0b0b0a;}
   }
- 
+
   @media (prefers-reduced-motion:reduce){
     /* remove movement and infinite/looping animation, keep opacity & color feedback */
     .dot, .grain, .marquee-track{animation:none !important;}
@@ -339,12 +410,12 @@
     .hero-content > *{animation:none !important; opacity:1; transform:none;}
     .gallery img, .gallery video{transform:none; transition:opacity .2s ease; transition-delay:0s !important;}
   }
- 
+
   a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
 </style>
 </head>
 <body>
- 
+
 <header>
   <div class="logo">JK<span style="color:var(--accent)">.</span></div>
   <nav class="nav-mobile-hide">
@@ -355,15 +426,24 @@
   </nav>
   <a href="resume.pdf" class="btn-resume" download>Résumé</a>
 </header>
- 
+
+<div class="pin-overlay" id="pinOverlay">
+  <div class="pin-dialog" id="pinDialog">
+    <div class="lock-icon">🔒</div>
+    <h3>This case study is protected</h3>
+    <p>Enter the PIN shared with you to view the full case study, process and visuals.</p>
+    <div class="pin-input-row">
+      <input type="text" inputmode="numeric" maxlength="6" class="pin-input" id="pinInput" placeholder="· · · ·" autocomplete="off">
+      <button class="pin-submit" id="pinSubmit">View</button>
+    </div>
+    <div class="pin-error" id="pinError">Incorrect PIN, try again.</div>
+    <button class="pin-close" id="pinClose">Cancel</button>
+  </div>
+</div>
+
 <!-- ============ HERO ============ -->
 <section class="hero" style="padding-top:140px;">
-  <div class="hero-media">
-    <video autoplay muted loop playsinline poster="forte_poster.jpg" id="heroVideo">
-      <source src="forte_motion.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="hero-overlay"></div>
+  <div class="hero-media" style="background:radial-gradient(ellipse 900px 600px at 78% 20%, #201812 0%, transparent 60%), radial-gradient(ellipse 700px 500px at 15% 85%, #12140f 0%, transparent 55%), var(--bg);"></div>
   <div class="grain"></div>
   <div class="hero-content">
     <div class="eyebrow"><span class="dot" aria-hidden="true"></span> Open for freelance work, Bengaluru, India</div>
@@ -375,16 +455,44 @@
       <div>Status<span>Open to freelance &amp; full-time</span></div>
     </div>
   </div>
-  <div class="hero-credit">Featured work<br><b>Forte Series</b>, Campaign Film</div>
 </section>
- 
+
 <div class="marquee-band" aria-hidden="true">
   <div class="marquee-track">
     <span><b>Brand Identity</b></span><span><b>Campaign Design</b></span><span><b>Visual Strategy</b></span><span><b>UX Audits</b></span><span><b>Motion</b></span><span><b>Disney</b></span><span><b>Microsoft</b></span><span><b>Logitech</b></span>
     <span><b>Brand Identity</b></span><span><b>Campaign Design</b></span><span><b>Visual Strategy</b></span><span><b>UX Audits</b></span><span><b>Motion</b></span><span><b>Disney</b></span><span><b>Microsoft</b></span><span><b>Logitech</b></span>
   </div>
 </div>
- 
+
+<section id="what-i-do" style="padding-top:90px; padding-bottom:90px;">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:48px;">
+      <h2>What I Do</h2>
+      <p>Three ways I usually get pulled into a project, from the ground up or midway through.</p>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar">
+        <div class="num">01</div>
+        <h3>Brand Identity</h3>
+        <p>Logo systems, color and type, and the usage rules that keep a brand consistent once it's out of my hands, built to scale from an app icon to a trade show booth.</p>
+        <div class="pillar-ex">Multi-Brand Systems / Fleetconnect / MBRDI</div>
+      </div>
+      <div class="pillar">
+        <div class="num">02</div>
+        <h3>Campaign &amp; Launch</h3>
+        <p>Concept-to-execution creative for a specific moment, a product launch, a seasonal push, built for social, out-of-home and everything between.</p>
+        <div class="pillar-ex">Forte Series / RadBeauty / Fly Realty</div>
+      </div>
+      <div class="pillar">
+        <div class="num">03</div>
+        <h3>Strategy &amp; UX Audits</h3>
+        <p>Auditing an existing product or brand for where it's losing trust or conversions, then handing back specific, prioritized fixes, not just a mood board.</p>
+        <div class="pillar-ex">Pepperfry / Fleetconnect</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ WORK ============ -->
 <section id="work">
   <div class="wrap">
@@ -392,199 +500,36 @@
       <h2>Selected<br>Work</h2>
       <p>Every one of these started as someone else's problem and a blank page. Here's how each found its shape, from 2021 to 2026.</p>
     </div>
- 
-    <!-- 01 Branding Portfolio -->
-    <div class="project reveal" data-project>
+
+    <div class="filters reveal" role="tablist" aria-label="Filter projects by category">
+      <button class="filter-btn active" data-filter="all">All Work</button>
+      <button class="filter-btn" data-filter="branding">Branding</button>
+      <button class="filter-btn" data-filter="campaign">Campaigns</button>
+      <button class="filter-btn" data-filter="ux">UX Audits</button>
+      <button class="filter-btn" data-filter="corporate">Corporate</button>
+    </div>
+
+    <!-- Flyn -->
+    <div class="project reveal" data-project data-category="branding" data-case-study="flyn.html">
       <div class="project-row">
         <div class="project-num">01</div>
         <div class="project-title-wrap">
-          <h3>Multi-Brand Identity Systems</h3>
-          <div class="sub">Six ground-up brand identities across fashion, AI, F&amp;B and real estate.</div>
+          <h3>Flyn <span class="featured-badge">Featured</span></h3>
+          <div class="sub">Instant fashion delivery brand refresh, a tiered identity system built for scale.</div>
+          <div class="project-meta-line"><span>YEAR: 2025</span><span>CLIENT: Flyn Tech Inc.</span></div>
         </div>
-        <div class="tags"><span class="tag">Branding</span><span class="tag">Identity</span></div>
-        <div class="chevron"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke-width="1.3"/></svg></div>
+        <div class="tags"><span class="tag">Branding</span><span class="tag">Identity</span><span class="lock-badge">&#128274; PIN</span></div>
+        <div class="chevron"><svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke-width="1.3"/></svg></div>
       </div>
-      <div class="project-body"><div class="project-body-inner">
-        <div class="role-tags"><span class="role-tag">Brand Strategy</span><span class="role-tag">Logo Systems</span><span class="role-tag">Typography</span><span class="role-tag">Color Systems</span></div>
-        <p class="project-desc">A branding portfolio of six independent identity systems: <b style="color:var(--ink)">Flyn</b> (instant fashion delivery), <b style="color:var(--ink)">Hiroscope.ai</b> (AI hiring), <b style="color:var(--ink)">Tiffyn</b> (AI meal planning), <b style="color:var(--ink)">Vendhub</b> (vending entrepreneurship), <b style="color:var(--ink)">Talenzap</b> (competition platform) and <b style="color:var(--ink)">Real Magic</b> (real estate).</p>
-        <div class="story">
-          <div class="story-item"><span class="story-label">Brief</span><p>Six early-stage companies, six blank slates. None had existing brand equity to lean on, and each needed to look credible from day one.</p></div>
-          <div class="story-item"><span class="story-label">Approach</span><p>For every brand I mapped positioning to a distinct <b>logo architecture, color palette and typography system</b> built to scale from an app icon to physical packaging.</p></div>
-          <div class="story-item"><span class="story-label">Outcome</span><p>Six ready-to-run brand systems, each handed off with usage rules a founder without a design team could actually follow.</p></div>
-        </div>
-        <div class="gallery">
-          <div class="mockup-frame wide"><img src="branding_cover.jpg" alt="Branding portfolio cover"><div class="cap"><span>Portfolio deck</span><b>Cover</b></div></div>
-          <div class="mockup-frame"><img src="branding_hiroscope.jpg" alt="Hiroscope.ai brand system"><div class="cap"><span>Brand system</span><b>Hiroscope.ai</b></div></div>
-          <div class="mockup-frame"><img src="branding_tiffyn.jpg" alt="Tiffyn brand system"><div class="cap"><span>Brand system</span><b>Tiffyn</b></div></div>
-          <div class="mockup-frame"><img src="branding_talenzap.jpg" alt="Talenzap brand system"><div class="cap"><span>Brand system</span><b>Talenzap</b></div></div>
-          <div class="mockup-frame"><img src="branding_realmagic.jpg" alt="Real Magic brand system"><div class="cap"><span>Brand system</span><b>Real Magic</b></div></div>
-        </div>
-      </div></div>
     </div>
- 
-    <!-- 02 Fleetconnect -->
-    <div class="project reveal" data-project>
-      <div class="project-row">
-        <div class="project-num">02</div>
-        <div class="project-title-wrap">
-          <h3>Fleetconnect</h3>
-          <div class="sub">Branding strategy audit for a B2B trucking data platform.</div>
-        </div>
-        <div class="tags"><span class="tag">Strategy</span><span class="tag">B2B</span></div>
-        <div class="chevron"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke-width="1.3"/></svg></div>
-      </div>
-      <div class="project-body"><div class="project-body-inner">
-        <div class="role-tags"><span class="role-tag">Brand Audit</span><span class="role-tag">Color System</span><span class="role-tag">Typography</span><span class="role-tag">UI Recommendations</span></div>
-        <div class="story">
-          <div class="story-item"><span class="story-label">Brief</span><p>A B2B trucking-data platform needed to look instantly trustworthy to brokers and insurers running compliance checks, not like another consumer app.</p></div>
-          <div class="story-item"><span class="story-label">Approach</span><p>I audited the existing product and built a strategy around three pillars: <b>trust &amp; accessibility, seriousness &amp; function, data clarity</b>. Each translated into concrete color, typeface and layout recommendations.</p></div>
-          <div class="story-item"><span class="story-label">Outcome</span><p>A branding strategy deck the product and design teams could align around before the next build sprint.</p></div>
-        </div>
-        <div class="gallery">
-          <div class="mockup-frame wide"><img src="fleetconnect_cover.jpg" alt="Fleetconnect deck cover"><div class="cap"><span>Strategy deck</span><b>Cover</b></div></div>
-          <div class="mockup-frame"><img src="fleetconnect_typography.jpg" alt="Fleetconnect typography recommendation"><div class="cap"><span>Recommendation</span><b>Typography</b></div></div>
-          <div class="mockup-frame"><img src="fleetconnect_layout.jpg" alt="Fleetconnect layout recommendation"><div class="cap"><span>Recommendation</span><b>Layout</b></div></div>
-        </div>
-      </div></div>
+
+    <div class="section-head reveal" style="margin-top:64px; padding-top:40px; border-top:1px solid var(--line);">
+      <p style="color:var(--ink-faint); font-size:13px;">More revamped case studies are on the way. Check back soon.</p>
     </div>
- 
-    <!-- 03 Forte Series -->
-    <div class="project reveal" data-project>
-      <div class="project-row">
-        <div class="project-num">03</div>
-        <div class="project-title-wrap">
-          <h3>Forte Series</h3>
-          <div class="sub">Campaign concept, static &amp; motion posters for a men's grooming brand.</div>
-        </div>
-        <div class="tags"><span class="tag">Campaign</span><span class="tag">Motion</span></div>
-        <div class="chevron"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke-width="1.3"/></svg></div>
-      </div>
-      <div class="project-body"><div class="project-body-inner">
-        <div class="role-tags"><span class="role-tag">Campaign Concept</span><span class="role-tag">Art Direction</span><span class="role-tag">Static + Motion</span><span class="role-tag">Mockups</span></div>
-        <div class="story">
-          <div class="story-item"><span class="story-label">Brief</span><p>A men's grooming brand wanted premium positioning without shouting for it: quiet luxury, not hype.</p></div>
-          <div class="story-item"><span class="story-label">Approach</span><p>I built the concept <b>"Invisible Performance,"</b> then art-directed a low-angle product shot on raw concrete with natural directional light, drawing from brands like Aesop, and paired it with bold, centered typography.</p></div>
-          <div class="story-item"><span class="story-label">Outcome</span><p>A launch-ready poster system shown across subway, storefront and mobile placements, extended into a vertical motion cut for social.</p></div>
-        </div>
-        <div class="gallery">
-          <div class="wide"><img src="forte_subway.jpg" alt="Forte Series subway ad mockup"><div class="plain-cap">Subway placement</div></div>
-          <div class="mockup-frame"><img src="forte_poster.jpg" alt="Forte Series static poster"><div class="cap"><span>Artwork</span><b>Static poster</b></div></div>
-          <div><img src="forte_iphone.jpg" alt="Forte Series mobile mockup"><div class="plain-cap">Mobile mockup</div></div>
-          <div><img src="forte_aframe.jpg" alt="Forte Series A-frame mockup"><div class="plain-cap">A-frame mockup</div></div>
-          <div class="wide"><video src="forte_motion.mp4" autoplay muted loop playsinline controls></video><div class="plain-cap">Motion poster</div></div>
-        </div>
-      </div></div>
-    </div>
- 
-    <!-- 04 Pepperfry -->
-    <div class="project reveal" data-project>
-      <div class="project-row">
-        <div class="project-num">04</div>
-        <div class="project-title-wrap">
-          <h3>Pepperfry UX Audit</h3>
-          <div class="sub">Homepage &amp; checkout UX audit focused on conversion and visual clarity.</div>
-        </div>
-        <div class="tags"><span class="tag">UX Audit</span><span class="tag">E-commerce</span></div>
-        <div class="chevron"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke-width="1.3"/></svg></div>
-      </div>
-      <div class="project-body"><div class="project-body-inner">
-        <div class="role-tags"><span class="role-tag">UX Audit</span><span class="role-tag">Information Hierarchy</span><span class="role-tag">Conversion Strategy</span></div>
-        <div class="story">
-          <div class="story-item"><span class="story-label">Brief</span><p>Pepperfry's homepage and checkout were losing conversions to cluttered navigation and decision fatigue.</p></div>
-          <div class="story-item"><span class="story-label">Approach</span><p>I audited both flows end-to-end, flagging <b>15+ specific friction points</b>, from multiple competing headers to a lack of trust signals, each paired with a concrete, growth-oriented fix.</p></div>
-          <div class="story-item"><span class="story-label">Outcome</span><p>A prioritized audit deck the product team could hand straight to engineering, with no further translation needed.</p></div>
-        </div>
-        <div class="gallery">
-          <div class="mockup-browser wide">
-            <div class="bar"><div class="dots"><span></span><span></span><span></span></div><div class="url">pepperfry.com</div></div>
-            <img src="pepperfry_homepage.jpg" alt="Pepperfry homepage audit">
-          </div>
-          <div class="mockup-browser wide">
-            <div class="bar"><div class="dots"><span></span><span></span><span></span></div><div class="url">pepperfry.com/checkout</div></div>
-            <img src="pepperfry_checkout.jpg" alt="Pepperfry checkout flow audit">
-          </div>
-        </div>
-      </div></div>
-    </div>
- 
-    <!-- 05 RadBeauty -->
-    <div class="project reveal" data-project>
-      <div class="project-row">
-        <div class="project-num">05</div>
-        <div class="project-title-wrap">
-          <h3>RadBeauty</h3>
-          <div class="sub">Campaign design for an AR makeup try-on app.</div>
-        </div>
-        <div class="tags"><span class="tag">Campaign</span><span class="tag">App</span></div>
-        <div class="chevron"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke-width="1.3"/></svg></div>
-      </div>
-      <div class="project-body"><div class="project-body-inner">
-        <div class="role-tags"><span class="role-tag">Social Campaign</span><span class="role-tag">Billboard/OOH</span><span class="role-tag">App Marketing</span></div>
-        <div class="story">
-          <div class="story-item"><span class="story-label">Brief</span><p>RadBeauty needed to explain its AR try-on loop (swipe, try, buy) before a scrolling thumb moved on.</p></div>
-          <div class="story-item"><span class="story-label">Approach</span><p>Bold typographic callouts and gestural iconography, designed to scale cleanly from a <b>social feed post to a subway billboard</b> without losing legibility.</p></div>
-          <div class="story-item"><span class="story-label">Outcome</span><p>Launch-ready creative delivered across social and out-of-home formats.</p></div>
-        </div>
-        <div class="gallery">
-          <div class="mockup-frame wide"><img src="radbeauty_1.jpg" alt="RadBeauty campaign and billboard"><div class="cap"><span>Campaign</span><b>Social and billboard</b></div></div>
-          <div class="mockup-frame wide"><img src="radbeauty_2.jpg" alt="RadBeauty app promo"><div class="cap"><span>Campaign</span><b>App promo</b></div></div>
-        </div>
-      </div></div>
-    </div>
- 
-    <!-- 06 MBRDI -->
-    <div class="project reveal" data-project>
-      <div class="project-row">
-        <div class="project-num">06</div>
-        <div class="project-title-wrap">
-          <h3>Mercedes-Benz R&amp;D India</h3>
-          <div class="sub">Corporate identity presentation for MBRDI.</div>
-        </div>
-        <div class="tags"><span class="tag">Corporate</span><span class="tag">Presentation</span></div>
-        <div class="chevron"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke-width="1.3"/></svg></div>
-      </div>
-      <div class="project-body"><div class="project-body-inner">
-        <div class="role-tags"><span class="role-tag">Presentation Design</span><span class="role-tag">Corporate Branding</span></div>
-        <div class="story">
-          <div class="story-item"><span class="story-label">Brief</span><p>Mercedes-Benz R&amp;D India needed an internal-facing presentation that felt as considered as the brand itself.</p></div>
-          <div class="story-item"><span class="story-label">Approach</span><p>I balanced automotive photography against a restrained <b>black-and-white editorial layout</b>, matching Mercedes-Benz's own visual standards rather than a generic slide template.</p></div>
-          <div class="story-item"><span class="story-label">Outcome</span><p>A presentation used to introduce MBRDI's mission across engineering, IT and product teams.</p></div>
-        </div>
-        <div class="gallery">
-          <div class="mockup-frame wide"><img src="mbrdi_1.jpg" alt="MBRDI presentation intro"><div class="cap"><span>Presentation</span><b>Intro</b></div></div>
-          <div class="mockup-frame"><img src="mbrdi_2.jpg" alt="MBRDI presentation sections"><div class="cap"><span>Presentation</span><b>Sections</b></div></div>
-          <div class="mockup-frame"><img src="mbrdi_3.jpg" alt="MBRDI presentation closing"><div class="cap"><span>Presentation</span><b>Closing</b></div></div>
-        </div>
-      </div></div>
-    </div>
- 
-    <!-- 07 Fly Realty -->
-    <div class="project reveal" data-project>
-      <div class="project-row">
-        <div class="project-num">07</div>
-        <div class="project-title-wrap">
-          <h3>Fly Realty</h3>
-          <div class="sub">Campaign creative for a luxury villa community.</div>
-        </div>
-        <div class="tags"><span class="tag">Campaign</span><span class="tag">Real Estate</span></div>
-        <div class="chevron"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke-width="1.3"/></svg></div>
-      </div>
-      <div class="project-body"><div class="project-body-inner">
-        <div class="role-tags"><span class="role-tag">Print/Digital Ad</span><span class="role-tag">Iconography</span></div>
-        <div class="story">
-          <div class="story-item"><span class="story-label">Brief</span><p>A villa community needed to sell a feeling: nature and luxury, not just a floor plan and a price.</p></div>
-          <div class="story-item"><span class="story-label">Approach</span><p>Editorial photography paired with a clean value-proposition strip and a <b>custom icon set</b> communicating lifestyle, community and sustainability at a glance.</p></div>
-          <div class="story-item"><span class="story-label">Outcome</span><p>Campaign creative delivered for print and digital placement.</p></div>
-        </div>
-        <div class="gallery">
-          <div class="mockup-frame wide"><img src="flyrealty_1.jpg" alt="Fly Realty campaign ad"><div class="cap"><span>Campaign</span><b>Print and digital ad</b></div></div>
-        </div>
-      </div></div>
-    </div>
- 
+
   </div>
 </section>
- 
+
 <!-- ============ ABOUT ============ -->
 <section id="about">
   <div class="wrap">
@@ -629,7 +574,7 @@
     </div>
   </div>
 </section>
- 
+
 <!-- ============ SKILLS ============ -->
 <section id="skills">
   <div class="wrap">
@@ -659,7 +604,7 @@
     </div>
   </div>
 </section>
- 
+
 <!-- ============ CONTACT ============ -->
 <section id="contact" class="contact">
   <div class="wrap">
@@ -672,20 +617,13 @@
     </div>
   </div>
 </section>
- 
+
 <footer class="wrap">
   <div>© 2026 Joswin Kumar</div>
   <div>Bengaluru, India. Open to relocation.</div>
 </footer>
- 
+
 <script>
-  // hero video: respect reduced motion, pause and show poster frame
-  const heroVideo = document.getElementById('heroVideo');
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    heroVideo.removeAttribute('autoplay');
-    heroVideo.pause();
-  }
- 
   // scroll reveal
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(en=>{
@@ -693,16 +631,75 @@
     });
   }, {threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
- 
-  // project accordion
+
+  // filter tabs
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projects = document.querySelectorAll('[data-project]');
+  filterBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      filterBtns.forEach(b=> b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      projects.forEach(p=>{
+        const show = f === 'all' || p.dataset.category === f;
+        p.classList.toggle('filtered-out', !show);
+        if(!show) p.classList.remove('open');
+      });
+    });
+  });
+
+  // PIN gate for case studies
+  const CORRECT_PIN = 'View@2026!';
+  let unlocked = sessionStorage.getItem('jk_unlocked') === 'true';
+
+  const pinOverlay = document.getElementById('pinOverlay');
+  const pinDialog = document.getElementById('pinDialog');
+  const pinInput = document.getElementById('pinInput');
+  const pinSubmit = document.getElementById('pinSubmit');
+  const pinError = document.getElementById('pinError');
+  const pinClose = document.getElementById('pinClose');
+  let pendingUrl = null;
+
+  function openPin(url){
+    pendingUrl = url;
+    pinOverlay.classList.add('show');
+    pinError.classList.remove('show');
+    pinInput.value = '';
+    setTimeout(()=> pinInput.focus(), 100);
+  }
+  function closePin(){
+    pinOverlay.classList.remove('show');
+    pendingUrl = null;
+  }
+  function tryUnlock(){
+    if (pinInput.value.trim() === CORRECT_PIN) {
+      unlocked = true;
+      sessionStorage.setItem('jk_unlocked', 'true');
+      const url = pendingUrl;
+      closePin();
+      if (url) window.location.href = url;
+    } else {
+      pinError.classList.add('show');
+      pinDialog.classList.remove('shake'); void pinDialog.offsetWidth; pinDialog.classList.add('shake');
+      pinInput.value = '';
+      pinInput.focus();
+    }
+  }
+  pinSubmit.addEventListener('click', tryUnlock);
+  pinInput.addEventListener('keydown', e=>{ if(e.key === 'Enter') tryUnlock(); });
+  pinClose.addEventListener('click', closePin);
+  pinOverlay.addEventListener('click', e=>{ if(e.target === pinOverlay) closePin(); });
+
+  // project cards: click opens the case study (PIN required, once per session)
   document.querySelectorAll('[data-project]').forEach(p=>{
+    const url = p.dataset.caseStudy;
     p.querySelector('.project-row').addEventListener('click', ()=>{
-      const isOpen = p.classList.contains('open');
-      document.querySelectorAll('[data-project].open').forEach(o=>{ if(o!==p) o.classList.remove('open'); });
-      p.classList.toggle('open', !isOpen);
+      if (!url) return;
+      if (unlocked) { window.location.href = url; return; }
+      openPin(url);
     });
   });
 </script>
- 
+
 </body>
 </html>
