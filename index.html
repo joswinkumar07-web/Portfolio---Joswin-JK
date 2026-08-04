@@ -6,8 +6,8 @@
 <title>Joswin Kumar, Visual &amp; Branding Designer</title>
 <meta name="description" content="Joswin Kumar, Visual & Branding Designer. 7+ years building brand identity systems, campaigns and digital design for Disney, Microsoft, Logitech, Osmo and more.">
  
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="icon" type="image/png" href="./assets/favicon.png">
  
 <meta property="og:type" content="website">
 <meta property="og:title" content="Joswin Kumar, Visual & Branding Designer">
@@ -112,16 +112,14 @@
   @media (max-width:980px){ .hero-split{grid-template-columns:1fr; gap:0;} }
  
   .hero-portrait{
-    position:relative; height:min(64vh,620px); display:flex; align-items:flex-end; justify-content:center;
+    position:relative; height:min(70vh,660px); display:flex; align-items:flex-end; justify-content:center;
     order:2;
   }
   .hero-portrait img{
-    width:100%; height:100%; object-fit:cover; object-position:top center; border-radius:4px;
-    -webkit-mask-image:linear-gradient(to bottom, black 78%, transparent 100%);
-    mask-image:linear-gradient(to bottom, black 78%, transparent 100%);
+    width:100%; height:100%; object-fit:contain; object-position:bottom center;
   }
   @media (max-width:980px){
-    .hero-portrait{height:340px; margin-top:32px; order:2;}
+    .hero-portrait{height:380px; margin-top:32px; order:2;}
   }
  
   .hero-media{position:absolute; inset:0; z-index:0; overflow:hidden; background:#0b0b0a;}
@@ -549,7 +547,7 @@
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </nav>
-  <a href="resume.pdf" class="btn-resume" download>Résumé</a>
+  <a href="./assets/resume.pdf" class="btn-resume" download>Résumé</a>
 </header>
  
 <div class="pin-overlay" id="pinOverlay">
@@ -587,7 +585,7 @@
     </div>
   </div>
   <div class="hero-portrait">
-    <img src="hero_portrait.jpg" alt="Joswin Kumar portrait">
+    <img src="./assets/hero_portrait.png" alt="Joswin Kumar portrait">
   </div>
   </div>
 </section>
@@ -653,7 +651,7 @@
     <div class="project-grid">
       <!-- Flyn -->
       <div class="project reveal project-card" data-project data-category="branding" data-case-study="flyn.html">
-        <img src="flyn_hero_van.jpg" alt="Flyn branded delivery van thumbnail">
+        <img src="./assets/flyn_hero_van.jpg" alt="Flyn branded delivery van thumbnail">
         <div class="card-overlay"></div>
         <div class="card-lock">&#128274;</div>
         <div class="card-content">
@@ -667,7 +665,7 @@
  
       <!-- JFIT -->
       <div class="project reveal project-card" data-project data-category="branding" data-case-study="jfit.html">
-        <img src="jfit_hero.jpg" alt="JFIT brand thumbnail">
+        <img src="./assets/jfit_hero.jpg" alt="JFIT brand thumbnail">
         <div class="card-overlay"></div>
         <div class="card-lock">&#128274;</div>
         <div class="card-content">
