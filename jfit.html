@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JFIT, Holistic Wellness Ecosystem Rebrand, Joswin Kumar</title>
+<meta name="description" content="JFIT, Holistic Wellness Ecosystem Rebrand. A branding case study by Joswin Kumar.">
+<link rel="icon" type="image/jpeg" href="forte_poster.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0b0b0a; --bg-elev:#141412; --ink:#f3f1e9; --ink-dim:#9a978c; --ink-faint:#5c5a51;
+    --accent:#ff6b45; --accent-dim:#ff6b4522; --line:#2a2924; --radius:2px;
+    --ease:cubic-bezier(.16,.8,.24,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  ::selection{background:var(--accent);color:#0b0b0a;}
+  body{background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; font-weight:300; overflow-x:hidden;}
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif; font-weight:500; letter-spacing:-.02em; line-height:1.05;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 40px;}
+  @media (max-width:720px){ .wrap{padding:0 22px;} }
+  .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent);}
+
+  header{position:sticky; top:0; z-index:50; background:rgba(11,11,10,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .header-inner{max-width:1100px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;}
+  @media (max-width:720px){ .header-inner{padding:18px 22px;} }
+  .back-link{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.05em; color:var(--ink-dim); display:flex; align-items:center; gap:8px; transition:color .2s ease;}
+  .back-link:hover{color:var(--accent);}
+  .logo{font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:600;}
+
+  /* hero */
+  .cs-hero{padding:64px 0 40px;}
+  .cs-hero h1{font-size:clamp(40px,7vw,84px); margin:18px 0 6px;}
+  .cs-hero h2.headline{font-size:clamp(18px,2.4vw,26px); color:var(--ink-dim); font-weight:400; font-family:'Inter',sans-serif; margin-bottom:20px; max-width:680px;}
+  .cs-hero .subtitle{font-size:16px; color:var(--ink-dim); max-width:640px; line-height:1.7; margin-bottom:36px;}
+  .meta-row{display:flex; gap:48px; flex-wrap:wrap; padding-top:26px; border-top:1px solid var(--line); margin-bottom:40px;}
+  .meta-row div{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); letter-spacing:.05em; text-transform:uppercase;}
+  .meta-row div span{display:block; margin-top:6px; font-family:'Inter',sans-serif; font-size:14px; color:var(--ink); font-weight:400; text-transform:none; letter-spacing:0;}
+  .cs-hero-img{width:100%; max-height:560px; object-fit:cover; border-radius:4px; border:1px solid var(--line);}
+
+  /* content sections */
+  .cs-section{padding:80px 0;}
+  @media (max-width:720px){ .cs-section{padding:56px 0;} }
+  .cs-section h2{font-size:clamp(28px,4vw,44px); margin-bottom:22px;}
+  .cs-section .lead{font-size:17px; line-height:1.75; color:var(--ink-dim); max-width:680px; margin-bottom:32px;}
+  .pull-quote{
+    font-family:'Space Grotesk',sans-serif; font-size:clamp(24px,3.5vw,36px); font-weight:500;
+    color:var(--ink); border-left:2px solid var(--accent); padding:6px 0 6px 28px; margin:40px 0; max-width:640px;
+  }
+
+  .pillars-cs{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:40px;}
+  @media (max-width:780px){ .pillars-cs{grid-template-columns:1fr;} }
+  .pillar-cs{background:var(--bg-elev); padding:30px 26px;}
+  .pillar-cs h3{font-size:18px; margin-bottom:10px;}
+  .pillar-cs p{font-size:14px; line-height:1.65; color:var(--ink-dim);}
+  .swatches{display:flex; gap:8px; margin-top:14px;}
+  .swatch{width:26px; height:26px; border-radius:50%; border:1px solid var(--line);}
+  .swatch-row{display:flex; gap:20px; margin-top:28px; flex-wrap:wrap;}
+  .swatch-item{text-align:left;}
+  .swatch-block{width:64px; height:64px; border-radius:6px; border:1px solid var(--line); margin-bottom:8px;}
+  .swatch-item span{display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint);}
+
+  .cs-image{width:100%; border-radius:4px; border:1px solid var(--line); margin-top:8px;}
+  .cs-image-row{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:8px;}
+  @media (max-width:720px){ .cs-image-row{grid-template-columns:1fr;} }
+  .cs-image-row img{border-radius:4px; border:1px solid var(--line);}
+  .img-caption{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); letter-spacing:.05em; text-transform:uppercase; margin-top:10px;}
+
+  /* comparison table */
+  .compare-table{width:100%; border-collapse:collapse; margin-top:8px; margin-bottom:40px;}
+  .compare-table th{
+    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--ink-faint); text-align:left; padding:12px 20px; border-bottom:1px solid var(--line);
+  }
+  .compare-table th:first-child{color:var(--ink-faint);}
+  .compare-table th:last-child{color:var(--accent);}
+  .compare-table td{padding:20px; border-bottom:1px solid var(--line); font-size:14px; line-height:1.6; color:var(--ink-dim); vertical-align:top;}
+  .compare-table td b{color:var(--ink); font-weight:500; display:block; margin-bottom:4px;}
+  .compare-table td:last-child{background:var(--accent-dim);}
+  @media (max-width:720px){ .compare-table, .compare-table thead, .compare-table tbody, .compare-table th, .compare-table td, .compare-table tr{display:block;} .compare-table thead{display:none;} .compare-table td{border-bottom:none;} .compare-table tr{border-bottom:1px solid var(--line); padding-bottom:12px; margin-bottom:12px;} }
+
+  footer.cs-footer{border-top:1px solid var(--line); padding:56px 0; text-align:center;}
+  footer.cs-footer .next-label{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); letter-spacing:.08em; text-transform:uppercase; margin-bottom:14px;}
+  footer.cs-footer a.next-project{font-family:'Space Grotesk',sans-serif; font-size:28px; color:var(--ink); transition:color .2s ease; display:inline-block;}
+  footer.cs-footer a.next-project:hover{color:var(--accent);}
+  footer.cs-footer a.back-all{
+    margin-top:32px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    padding:12px 26px; border:1px solid var(--ink); border-radius:20px; display:inline-block; transition:all .2s ease;
+  }
+  footer.cs-footer a.back-all:hover{background:var(--ink); color:#0b0b0a;}
+
+  /* pin gate (page-level, independent of the main portfolio page) */
+  .pin-overlay{
+    position:fixed; inset:0; z-index:1000; background:var(--bg);
+    display:flex; align-items:center; justify-content:center; padding:24px;
+  }
+  .pin-overlay.hide{display:none;}
+  .pin-dialog{
+    background:var(--bg-elev); border:1px solid var(--line); border-radius:6px; padding:40px 36px;
+    max-width:380px; width:100%; text-align:center;
+  }
+  .pin-dialog .lock-icon{font-size:22px; margin-bottom:16px;}
+  .pin-dialog h3{font-size:19px; margin-bottom:8px;}
+  .pin-dialog p{font-size:13px; color:var(--ink-dim); margin-bottom:24px; line-height:1.6;}
+  .pin-input-row{display:flex; gap:8px;}
+  .pin-input{
+    flex:1; background:var(--bg); border:1px solid var(--line); border-radius:4px; color:var(--ink);
+    font-family:'IBM Plex Mono',monospace; font-size:16px; letter-spacing:.05em; text-align:center; padding:12px; outline:none;
+  }
+  .pin-input:focus{border-color:var(--accent);}
+  .pin-submit{
+    background:var(--accent); color:#0b0b0a; border:none; border-radius:4px; padding:0 18px;
+    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.05em; text-transform:uppercase; cursor:pointer;
+  }
+  .pin-error{color:#e05a4a; font-size:12px; margin-top:12px; height:14px; opacity:0; transition:opacity .2s ease;}
+  .pin-error.show{opacity:1;}
+  .pin-dialog.shake{animation:shake .4s;}
+  @keyframes shake{20%{transform:translateX(-6px);}40%{transform:translateX(6px);}60%{transform:translateX(-4px);}80%{transform:translateX(4px);}100%{transform:translateX(0);}}
+  .pin-back{margin-top:18px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint);}
+
+  .cs-content{opacity:0;}
+  .cs-content.revealed{opacity:1; transition:opacity .4s ease;}
+
+  @media (prefers-reduced-motion:reduce){ .pin-dialog.shake{animation:none;} .cs-content{transition:none;} }
+</style>
+</head>
+<body>
+
+<div class="pin-overlay" id="pinOverlay">
+  <div class="pin-dialog" id="pinDialog">
+    <div class="lock-icon">&#128274;</div>
+    <h3>This case study is protected</h3>
+    <p>Enter the PIN shared with you to view the full case study.</p>
+    <div class="pin-input-row">
+      <input type="text" inputmode="text" maxlength="20" class="pin-input" id="pinInput" placeholder="PIN" autocomplete="off">
+      <button class="pin-submit" id="pinSubmit">View</button>
+    </div>
+    <div class="pin-error" id="pinError">Incorrect PIN, try again.</div>
+    <a class="pin-back" href="index.html">&larr; Back to portfolio</a>
+  </div>
+</div>
+
+<div class="cs-content" id="csContent">
+
+<header>
+  <div class="header-inner">
+    <a class="back-link" href="index.html">&larr; Back to portfolio</a>
+    <div class="logo">JK<span style="color:var(--accent)">.</span></div>
+  </div>
+</header>
+
+<!-- Section 1: Hero Header & Metadata -->
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="eyebrow">Brand Strategy / Visual Identity / UI-UX Guidelines</div>
+    <h1>JFIT</h1>
+    <h2 class="headline">Evolving Beyond the Gym: A Holistic Wellness Ecosystem</h2>
+    <p class="subtitle">JFIT transitioned from a traditional gym identity into a comprehensive wellness ecosystem, unifying physical fitness, mental well-being, and personal coaching into a seamless, modern experience.</p>
+    <div class="meta-row">
+      <div>Client<span>JFIT Wellness Systems</span></div>
+      <div>Release<span>2026</span></div>
+      <div>Category<span>Brand Strategy, Visual Identity &amp; UI/UX Guidelines</span></div>
+    </div>
+    <img class="cs-hero-img" data-src="jfit_hero.jpg" alt="JFIT brand hero visual">
+  </div>
+</section>
+
+<!-- Section 2: The Challenge & Strategic Foundation -->
+<section class="cs-section">
+  <div class="wrap">
+    <div class="eyebrow">The Challenge</div>
+    <h2>Moving Beyond the &ldquo;Typical Gym&rdquo; Vibe</h2>
+    <p class="lead">JFIT needed to shed the traditional, high-intensity gym aesthetic to support its vision of a holistic wellness ecosystem. The core challenge was designing an adaptable visual system capable of bridging physical spaces, digital platforms, mental health coaching, and lifestyle merchandise under one cohesive brand voice.</p>
+    <div class="pull-quote">&ldquo;Your wellness, connected.&rdquo;</div>
+    <img class="cs-image" data-src="jfit_challenge.jpg" alt="Current issues identified in the legacy JFIT brand">
+    <div class="img-caption">Current issues in the legacy brand and product</div>
+  </div>
+</section>
+
+<!-- Section 3: The Rebrand Showcase -->
+<section class="cs-section">
+  <div class="wrap">
+    <div class="eyebrow">Brand Evolution</div>
+    <h2>Structured Transformation</h2>
+    <p class="lead">To pivot from a high-energy gym identity to an all-encompassing wellness brand, we restructured the visual identity from the ground up.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr><th>Legacy Brand Identity</th><th>New Ecosystem Visual System</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Traditional Gym Aesthetic</b>Focused heavily on aggressive fitness cues and high-intensity workout visuals.</td>
+          <td><b>Holistic Wellness Ecosystem</b>Soft, modern, and approachably sophisticated, representing physical, mental, and coaching pillars.</td>
+        </tr>
+        <tr>
+          <td><b>Fragmented Assets</b>Inconsistent logo application across digital platforms and physical apparel.</td>
+          <td><b>Structured Architecture</b>Flexible, responsive logo system with rigid clear-space grids and scalable lockups.</td>
+        </tr>
+        <tr>
+          <td><b>Standard Palette</b>High-contrast gym colors with limited emotional resonance.</td>
+          <td><b>Refined Color Palette</b>Deep Charcoal, Bright Vermilion, and Off-White driving trust and elevated energy.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <img class="cs-image" data-src="jfit_logo_compare.jpg" alt="JFIT old logo versus new logo comparison">
+    <div class="img-caption">Old logo, and the refreshed JFIT wordmark</div>
+  </div>
+</section>
+
+<!-- Section 4: Visual Identity & Design System -->
+<section class="cs-section">
+  <div class="wrap">
+    <div class="eyebrow">Visual Identity</div>
+    <h2>Crafting the Visual System</h2>
+    <p class="lead">The new identity centers around an interconnected emblem symbolizing holistic care. Paired with a dual-type system, <b style="color:var(--ink)">Space Grotesk</b> for modern, structural headings and <b style="color:var(--ink)">Lora</b> for approachable, editorial prose, the identity easily flexes between tech interfaces and reflective mental wellness touchpoints.</p>
+
+    <div class="swatch-row">
+      <div class="swatch-item"><div class="swatch-block" style="background:#FF421D"></div><span>Brand Vermilion<br>#FF421D</span></div>
+      <div class="swatch-item"><div class="swatch-block" style="background:#FAF5E8"></div><span>Cream<br>#FAF5E8</span></div>
+      <div class="swatch-item"><div class="swatch-block" style="background:#181818"></div><span>Dark Charcoal<br>#181818</span></div>
+    </div>
+
+    <img class="cs-image" data-src="jfit_moodboard.jpg" alt="JFIT visual direction moodboard and color palette" style="margin-top:36px;">
+    <div class="img-caption">Visual direction, inclusive wellness moodboard</div>
+
+    <img class="cs-image" data-src="jfit_logo_system.jpg" alt="JFIT logo variation system" style="margin-top:28px;">
+    <div class="img-caption">Logo construction and lockup variations</div>
+  </div>
+</section>
+
+<!-- Section 5: Implementation & Real-World Application -->
+<section class="cs-section">
+  <div class="wrap">
+    <div class="eyebrow">Implementation</div>
+    <h2>Physical &amp; Digital Ecosystem</h2>
+    <p class="lead">From mobile app components to physical apparel and merchandise, the rebranded identity presents a clean, premium visual presence. Standardized usage rules, color variations, and logo &ldquo;don'ts&rdquo; ensure visual integrity across every customer interaction point.</p>
+    <img class="cs-image" data-src="jfit_implementation.jpg" alt="JFIT app onboarding screen and tote bag mockup">
+    <div class="img-caption">App onboarding, and tote bag application</div>
+  </div>
+</section>
+
+<footer class="cs-footer">
+  <div class="wrap">
+    <div class="next-label">Next Project</div>
+    <a class="next-project" href="talenzap.html">&rarr; Talenzap</a>
+    <br>
+    <a class="back-all" href="index.html">&larr; Back to all work</a>
+  </div>
+</footer>
+
+</div>
+
+<script>
+  const CORRECT_PIN = 'View@2026!';
+  const pinOverlay = document.getElementById('pinOverlay');
+  const pinDialog = document.getElementById('pinDialog');
+  const pinInput = document.getElementById('pinInput');
+  const pinSubmit = document.getElementById('pinSubmit');
+  const pinError = document.getElementById('pinError');
+  const csContent = document.getElementById('csContent');
+
+  function revealContent(){
+    document.querySelectorAll('[data-src]').forEach(el=>{
+      el.src = el.dataset.src;
+      el.removeAttribute('data-src');
+    });
+    pinOverlay.classList.add('hide');
+    csContent.classList.add('revealed');
+  }
+
+  function tryUnlock(){
+    if (pinInput.value.trim() === CORRECT_PIN) {
+      sessionStorage.setItem('jk_unlocked', 'true');
+      revealContent();
+    } else {
+      pinError.classList.add('show');
+      pinDialog.classList.remove('shake'); void pinDialog.offsetWidth; pinDialog.classList.add('shake');
+      pinInput.value = '';
+      pinInput.focus();
+    }
+  }
+  pinSubmit.addEventListener('click', tryUnlock);
+  pinInput.addEventListener('keydown', e=>{ if(e.key === 'Enter') tryUnlock(); });
+
+  if (sessionStorage.getItem('jk_unlocked') === 'true') {
+    revealContent();
+  } else {
+    setTimeout(()=> pinInput.focus(), 100);
+  }
+</script>
+
+</body>
+</html>
