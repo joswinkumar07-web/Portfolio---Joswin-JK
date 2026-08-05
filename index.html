@@ -673,6 +673,19 @@
           <div class="view-pill">View Project</div>
         </div>
       </div>
+
+      <!-- Forte Series -->
+      <div class="project reveal project-card" data-project data-category="campaign corporate" data-case-study="forte.html">
+        <img src="forte2_hero.jpg" alt="Forte Series brand thumbnail">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <div>
+            <h3>Forte Series</h3>
+            <div class="card-sub">Campaign, Corporate &middot; 2026</div>
+          </div>
+          <div class="view-pill">View Project</div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -877,7 +890,8 @@
       btn.classList.add('active');
       const f = btn.dataset.filter;
       projects.forEach(p=>{
-        const show = f === 'all' || p.dataset.category === f;
+        const cats = (p.dataset.category || '').split(' ');
+        const show = f === 'all' || cats.includes(f);
         p.classList.toggle('filtered-out', !show);
         if(!show) p.classList.remove('open');
       });
