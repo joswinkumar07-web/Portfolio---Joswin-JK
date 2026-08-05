@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Forte Series, Invisible Performance Campaign & Brand System, Joswin Kumar</title>
+<meta name="description" content="Forte Series, Invisible Performance: Strategic Campaign & Digital Brand System. A branding case study by Joswin Kumar.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0b0b0a; --bg-elev:#141412; --ink:#f3f1e9; --ink-dim:#9a978c; --ink-faint:#5c5a51;
+    --accent:#ff6b45; --accent-dim:#ff6b4522; --line:#2a2924; --radius:2px;
+    --ease:cubic-bezier(.16,.8,.24,1); --ease-in-out:cubic-bezier(.77,0,.175,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  ::selection{background:var(--accent);color:#0b0b0a;}
+  body{background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; font-weight:300; overflow-x:hidden;}
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif; font-weight:500; letter-spacing:-.02em; line-height:1.05;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 40px;}
+  @media (max-width:720px){ .wrap{padding:0 22px;} }
+  .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent);}
+
+  header{position:sticky; top:0; z-index:50; background:rgba(11,11,10,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .header-inner{max-width:1100px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;}
+  @media (max-width:720px){ .header-inner{padding:18px 22px;} }
+  .back-link{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.05em; color:var(--ink-dim); display:flex; align-items:center; gap:8px; transition:color .2s ease;}
+  .back-link:hover{color:var(--accent);}
+  .logo{font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:600;}
+
+  .cs-hero{padding:64px 0 40px;}
+  .cs-hero h1{font-size:clamp(40px,7vw,84px); margin:18px 0 6px;}
+  .cs-hero h2.headline{font-size:clamp(18px,2.4vw,26px); color:var(--ink-dim); font-weight:400; font-family:'Inter',sans-serif; margin-bottom:20px; max-width:680px;}
+  .cs-hero .subtitle{font-size:16px; color:var(--ink-dim); max-width:640px; line-height:1.7; margin-bottom:36px;}
+  .meta-row{display:flex; gap:48px; flex-wrap:wrap; padding-top:26px; border-top:1px solid var(--line); margin-bottom:40px;}
+  .meta-row div{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); letter-spacing:.05em; text-transform:uppercase;}
+  .meta-row div span{display:block; margin-top:6px; font-family:'Inter',sans-serif; font-size:14px; color:var(--ink); font-weight:400; text-transform:none; letter-spacing:0;}
+  .cs-hero-img{width:100%; max-height:560px; object-fit:cover; border-radius:4px; border:1px solid var(--line);}
+
+  .cs-section{padding:56px 0;}
+  @media (max-width:720px){ .cs-section{padding:40px 0;} }
+  .cs-section h2{font-size:clamp(28px,4vw,44px); margin-bottom:22px;}
+  .cs-section h3.sub-head{font-size:19px; margin:36px 0 14px;}
+  .cs-section .lead{font-size:17px; line-height:1.75; color:var(--ink-dim); max-width:680px; margin-bottom:32px;}
+  .cs-section ul.plain{list-style:none; max-width:680px; margin-bottom:8px;}
+  .cs-section ul.plain li{font-size:15px; line-height:1.75; color:var(--ink-dim); margin-bottom:14px; padding-left:20px; position:relative;}
+  .cs-section ul.plain li::before{content:''; position:absolute; left:0; top:8px; width:8px; height:1.5px; background:var(--accent);}
+  .cs-section ul.plain li b{color:var(--ink); font-weight:500;}
+  .pull-quote{
+    font-family:'Space Grotesk',sans-serif; font-size:clamp(24px,3.5vw,36px); font-weight:500;
+    color:var(--ink); border-left:2px solid var(--accent); padding:6px 0 6px 28px; margin:40px 0; max-width:640px;
+  }
+
+  .pillars-cs{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:40px;}
+  @media (max-width:680px){ .pillars-cs{grid-template-columns:1fr;} }
+  .pillar-cs{background:var(--bg-elev); padding:30px 26px;}
+  .pillar-cs h3{font-size:18px; margin-bottom:10px;}
+  .pillar-cs p{font-size:14px; line-height:1.65; color:var(--ink-dim);}
+
+  .cs-image{width:100%; border-radius:4px; border:1px solid var(--line); margin-top:8px;}
+  .cs-image-row{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:8px;}
+  @media (max-width:720px){ .cs-image-row{grid-template-columns:1fr;} }
+  .cs-image-row img{border-radius:4px; border:1px solid var(--line);}
+  .img-caption{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); letter-spacing:.05em; text-transform:uppercase; margin-top:10px;}
+
+  footer.cs-footer{border-top:1px solid var(--line); padding:56px 0; text-align:center;}
+  footer.cs-footer .next-label{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); letter-spacing:.08em; text-transform:uppercase; margin-bottom:14px;}
+  footer.cs-footer a.next-project{font-family:'Space Grotesk',sans-serif; font-size:28px; color:var(--ink); transition:color .2s ease; display:inline-block;}
+  footer.cs-footer a.next-project:hover{color:var(--accent);}
+  footer.cs-footer a.back-all{
+    margin-top:32px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    padding:12px 26px; border:1px solid var(--ink); border-radius:20px; display:inline-block; transition:all .2s ease;
+  }
+  footer.cs-footer a.back-all:hover{background:var(--ink); color:#0b0b0a;}
+
+  /* pin gate, medium-style: public preview up top, gated content fades and prompts inline */
+  .gate-wrap{position:relative; max-height:420px; overflow:hidden; transition:max-height .6s var(--ease-in-out);}
+  .gate-wrap.unlocked{max-height:none; overflow:visible;}
+  .gate-fade{
+    position:absolute; left:0; right:0; bottom:0; height:220px; pointer-events:none;
+    background:linear-gradient(to bottom, transparent, var(--bg) 75%);
+  }
+  .gate-wrap.unlocked .gate-fade{display:none;}
+  .gate-prompt{
+    position:absolute; left:50%; bottom:24px; transform:translateX(-50%); width:calc(100% - 40px); max-width:420px;
+    background:var(--bg-elev); border:1px solid var(--line); border-radius:8px; padding:30px 28px; text-align:center;
+    box-shadow:0 20px 60px -15px rgba(0,0,0,.7);
+  }
+  .gate-wrap.unlocked .gate-prompt{display:none;}
+  .gate-prompt .lock-icon{font-size:20px; margin-bottom:14px;}
+  .gate-prompt h3{font-size:18px; margin-bottom:8px;}
+  .gate-prompt p{font-size:13px; color:var(--ink-dim); margin-bottom:20px; line-height:1.6;}
+  .pin-input-row{display:flex; gap:8px;}
+  .pin-input{
+    flex:1; background:var(--bg); border:1px solid var(--line); border-radius:4px; color:var(--ink);
+    font-family:'IBM Plex Mono',monospace; font-size:15px; letter-spacing:.05em; text-align:center; padding:11px; outline:none;
+  }
+  .pin-input:focus{border-color:var(--accent);}
+  .pin-submit{
+    background:var(--accent); color:#0b0b0a; border:none; border-radius:4px; padding:0 16px;
+    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.05em; text-transform:uppercase; cursor:pointer;
+  }
+  .pin-error{color:#e05a4a; font-size:12px; margin-top:10px; height:14px; opacity:0; transition:opacity .2s ease;}
+  .pin-error.show{opacity:1;}
+  .gate-prompt.shake{animation:shake .4s;}
+  @keyframes shake{20%{transform:translateX(calc(-50% - 6px));}40%{transform:translateX(calc(-50% + 6px));}60%{transform:translateX(calc(-50% - 4px));}80%{transform:translateX(calc(-50% + 4px));}100%{transform:translateX(-50%);}}
+
+  @media (prefers-reduced-motion:reduce){ .gate-prompt.shake{animation:none;} .gate-wrap{transition:none;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="back-link" href="index.html">&larr; Back to portfolio</a>
+    <div class="logo">JK<span style="color:var(--accent)">.</span></div>
+  </div>
+</header>
+
+<!-- Section 1: Hero Header & Metadata -->
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="eyebrow">Campaign Strategy / Brand Identity / Multi-Platform Creative</div>
+    <h1>Forte Series</h1>
+    <h2 class="headline">Invisible Performance: Strategic Campaign &amp; Digital Brand System</h2>
+    <p class="subtitle">Forte Series transformed its visual identity into an ultra-sophisticated, minimalist campaign designed for the modern urban professional, unifying architectural design elements, quiet luxury aesthetics, and multi-platform media assets into an effortless brand experience.</p>
+    <div class="meta-row">
+      <div>Client<span>Forte Series</span></div>
+      <div>Release<span>2026</span></div>
+      <div>Category<span>Campaign Strategy, Brand Identity &amp; Multi-Platform Creative Production</span></div>
+    </div>
+    <img class="cs-hero-img" src="forte2_hero.jpg" alt="Forte Series subway billboard mockup">
+  </div>
+</section>
+
+<!-- Section 2: The Challenge & Strategic Foundation -->
+<section class="cs-section">
+  <div class="wrap">
+    <div class="eyebrow">The Challenge</div>
+    <h2>Crafting Quiet Luxury: Positioning for the Modern Professional</h2>
+    <p class="lead">In a market dominated by loud, high-effort styling products, Forte Series needed to position itself as the silent partner for the modern urban professional. The challenge required designing a visually compelling, understated brand ecosystem that communicates 24-hour reliability and invisible performance without relying on overt promotional noise.</p>
+    <div class="pull-quote">&ldquo;Hold that looks like nothing.&rdquo;</div>
+
+    <h3 class="sub-head">Strategic Pillars</h3>
+    <div class="pillars-cs">
+      <div class="pillar-cs">
+        <h3>Invisible Performance</h3>
+        <p>Communicating true luxury as looking impeccable without appearing to have tried, highlighting 24-hour hold with a completely undetectable finish.</p>
+      </div>
+      <div class="pillar-cs">
+        <h3>The Silent Partner</h3>
+        <p>Positioning the product line as an essential, trusted companion for professionals navigating high-speed modern life.</p>
+      </div>
+      <div class="pillar-cs">
+        <h3>Architectural Minimalism</h3>
+        <p>Utilizing low-angle product photography on raw concrete plinths to evoke monumental strength, stability, and premium quality.</p>
+      </div>
+      <div class="pillar-cs">
+        <h3>Directional Lighting</h3>
+        <p>Employing natural, directional lighting to capture a "Morning Edge" feel, symbolizing the start of a productive day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Visual Identity & Design System -->
+<section class="cs-section">
+  <div class="wrap">
+    <div class="eyebrow">Visual Identity</div>
+    <h2>Crafting the Visual System</h2>
+    <p class="lead">The visual identity centers on an architectural, minimalist mood reminiscent of premium luxury brands like Aesop. Built around bold, centered sans-serif headers for immediate impact and paired with functional iconography, the system ensures effortless clarity across print, digital, and out-of-home touchpoints.</p>
+
+    <h3 class="sub-head">Core Palette &amp; Elements</h3>
+    <div class="pillars-cs">
+      <div class="pillar-cs">
+        <h3>Mood &amp; Tone</h3>
+        <p>Sophisticated, architectural, and minimalist.</p>
+      </div>
+      <div class="pillar-cs">
+        <h3>Typography</h3>
+        <p>Bold, centered sans-serif headers paired with clean, highly legible body text.</p>
+      </div>
+      <div class="pillar-cs">
+        <h3>Core Benefit Icons</h3>
+        <p>Clean iconography communicating 24h Flexible Hold, Matte Finish, and Lightweight Feel.</p>
+      </div>
+      <div class="pillar-cs">
+        <h3>Visual Aesthetic</h3>
+        <p>Raw textures, neutral concrete grays, and warm morning light.</p>
+      </div>
+    </div>
+
+    <div class="cs-image-row" style="margin-top:36px;">
+      <div>
+        <img src="forte_poster.jpg" alt="Forte Series product shot on concrete plinth">
+        <div class="img-caption">Product shot on concrete plinth</div>
+      </div>
+      <div>
+        <img src="forte2_phone_desk.jpg" alt="Forte Series typography on mobile studio interface">
+        <div class="img-caption">Typography and interface, digital touchpoint</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gate-wrap" id="gateWrap">
+  <div class="gate-fade"></div>
+  <div class="gate-prompt" id="gatePrompt">
+    <div class="lock-icon">&#128274;</div>
+    <h3>Continue reading</h3>
+    <p>Enter the PIN shared with you to view the Implementation &amp; Real-World Application section.</p>
+    <div class="pin-input-row">
+      <input type="text" inputmode="text" maxlength="20" class="pin-input" id="pinInput" placeholder="PIN" autocomplete="off">
+      <button class="pin-submit" id="pinSubmit">View</button>
+    </div>
+    <div class="pin-error" id="pinError">Incorrect PIN, try again.</div>
+  </div>
+
+<!-- Section 4: Implementation & Real-World Application -->
+<section class="cs-section">
+  <div class="wrap">
+    <div class="eyebrow">Implementation</div>
+    <h2>Production &amp; Digital Tooling Integration</h2>
+    <p class="lead">Executing the campaign required integrating industry-leading design software and generative AI tools to accelerate conceptualization, refine motion graphics, and deliver high-fidelity collateral.</p>
+
+    <h3 class="sub-head">4.1 Creative Production Software</h3>
+    <ul class="plain">
+      <li><b>Adobe Photoshop:</b> Leveraged for advanced raster-based scene editing, including color correction, texture manipulation, and environmental retouching.</li>
+      <li><b>Adobe Illustrator:</b> Primary vector-based composition tool ensuring scalable poster designs and precise typographic control.</li>
+      <li><b>Adobe Premiere Pro:</b> Employed for keyframing, layering, motion graphics, and final sequence assembly.</li>
+    </ul>
+
+    <h3 class="sub-head">4.2 AI-Driven &amp; Production Tools</h3>
+    <ul class="plain">
+      <li><b>Adobe Firefly:</b> Utilized for generative AI scene creation to render product environments tailored to the campaign's minimalist aesthetic.</li>
+      <li><b>Luma AI:</b> Integrated to produce fluid transitions and cinematic camera movements that enhanced visual energy.</li>
+      <li><b>Gamma AI &amp; Ublast Assets:</b> Deployed Gamma AI for campaign documentation and Ublast for realistic stock mockups grounding the campaign in real-world contexts.</li>
+    </ul>
+
+    <div class="cs-image-row" style="margin-top:8px;">
+      <div>
+        <img data-src="forte2_phone_tilt.jpg" alt="Forte Series digital static poster on mobile ad interface">
+        <div class="img-caption">4.1 Digital static posters, mobile ad interfaces</div>
+      </div>
+      <div>
+        <img data-src="forte2_busstop.jpg" alt="Forte Series subway billboard mockup at night">
+        <div class="img-caption">4.2 Real-world subway billboard application</div>
+      </div>
+    </div>
+
+    <video data-src="forte2_motion.mp4" class="cs-image" style="margin-top:20px;" muted loop playsinline controls></video>
+    <div class="img-caption">Motion poster, Luma AI-assisted cinematic cut</div>
+
+    <h3 class="sub-head">4.3 Physical Applications &amp; Brand Rules</h3>
+    <ul class="plain">
+      <li><b>Out-of-Home (OOH) &amp; Subway Mockups:</b> Extended the "Clean Finish" narrative to large-format transit advertising and subway station poster displays.</li>
+      <li><b>Digital &amp; Social Formats:</b> Adapted static posters into optimized mobile and display layouts (1080 &times; 1350) targeting urban professionals.</li>
+      <li><b>Brand Integrity Standards:</b> Maintained strict balance between bold typographic messaging ("Clean Finish Effortlessly Achieved") and product feature callouts.</li>
+    </ul>
+    <img class="cs-image" data-src="forte2_aframe.jpg" alt="Forte Series A-frame street signage mockup">
+    <div class="img-caption">Physical application, A-frame street signage</div>
+  </div>
+</section>
+
+<footer class="cs-footer">
+  <div class="wrap">
+    <div class="next-label">Next Project</div>
+    <a class="next-project" href="flyn.html">&rarr; Flyn</a>
+    <br>
+    <a class="back-all" href="index.html">&larr; Back to all work</a>
+  </div>
+</footer>
+
+</div>
+
+<script>
+  const CORRECT_PIN = 'View@2026!';
+  const gateWrap = document.getElementById('gateWrap');
+  const gatePrompt = document.getElementById('gatePrompt');
+  const pinInput = document.getElementById('pinInput');
+  const pinSubmit = document.getElementById('pinSubmit');
+  const pinError = document.getElementById('pinError');
+
+  function unlockGate(){
+    gateWrap.querySelectorAll('[data-src]').forEach(el=>{
+      el.src = el.dataset.src;
+      el.removeAttribute('data-src');
+      if (el.tagName === 'VIDEO') el.load();
+    });
+    gateWrap.classList.add('unlocked');
+  }
+
+  function tryUnlock(){
+    if (pinInput.value.trim() === CORRECT_PIN) {
+      sessionStorage.setItem('jk_unlocked', 'true');
+      unlockGate();
+    } else {
+      pinError.classList.add('show');
+      gatePrompt.classList.remove('shake'); void gatePrompt.offsetWidth; gatePrompt.classList.add('shake');
+      pinInput.value = '';
+      pinInput.focus();
+    }
+  }
+  pinSubmit.addEventListener('click', tryUnlock);
+  pinInput.addEventListener('keydown', e=>{ if(e.key === 'Enter') tryUnlock(); });
+
+  if (sessionStorage.getItem('jk_unlocked') === 'true') {
+    unlockGate();
+  }
+</script>
+
+</body>
+</html>
