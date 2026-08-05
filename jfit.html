@@ -46,8 +46,8 @@
   .cs-hero-img{width:100%; max-height:560px; object-fit:cover; border-radius:4px; border:1px solid var(--line);}
 
   /* content sections */
-  .cs-section{padding:80px 0;}
-  @media (max-width:720px){ .cs-section{padding:56px 0;} }
+  .cs-section{padding:56px 0;}
+  @media (max-width:720px){ .cs-section{padding:40px 0;} }
   .cs-section h2{font-size:clamp(28px,4vw,44px); margin-bottom:22px;}
   .cs-section .lead{font-size:17px; line-height:1.75; color:var(--ink-dim); max-width:680px; margin-bottom:32px;}
   .pull-quote{
@@ -96,58 +96,42 @@
   }
   footer.cs-footer a.back-all:hover{background:var(--ink); color:#0b0b0a;}
 
-  /* pin gate (page-level, independent of the main portfolio page) */
-  .pin-overlay{
-    position:fixed; inset:0; z-index:1000; background:var(--bg);
-    display:flex; align-items:center; justify-content:center; padding:24px;
+  /* pin gate, medium-style: public preview up top, gated content fades and prompts inline */
+  .gate-wrap{position:relative; max-height:420px; overflow:hidden; transition:max-height .6s var(--ease-in-out);}
+  .gate-wrap.unlocked{max-height:none; overflow:visible;}
+  .gate-fade{
+    position:absolute; left:0; right:0; bottom:0; height:220px; pointer-events:none;
+    background:linear-gradient(to bottom, transparent, var(--bg) 75%);
   }
-  .pin-overlay.hide{display:none;}
-  .pin-dialog{
-    background:var(--bg-elev); border:1px solid var(--line); border-radius:6px; padding:40px 36px;
-    max-width:380px; width:100%; text-align:center;
+  .gate-wrap.unlocked .gate-fade{display:none;}
+  .gate-prompt{
+    position:absolute; left:50%; bottom:24px; transform:translateX(-50%); width:calc(100% - 40px); max-width:420px;
+    background:var(--bg-elev); border:1px solid var(--line); border-radius:8px; padding:30px 28px; text-align:center;
+    box-shadow:0 20px 60px -15px rgba(0,0,0,.7);
   }
-  .pin-dialog .lock-icon{font-size:22px; margin-bottom:16px;}
-  .pin-dialog h3{font-size:19px; margin-bottom:8px;}
-  .pin-dialog p{font-size:13px; color:var(--ink-dim); margin-bottom:24px; line-height:1.6;}
+  .gate-wrap.unlocked .gate-prompt{display:none;}
+  .gate-prompt .lock-icon{font-size:20px; margin-bottom:14px;}
+  .gate-prompt h3{font-size:18px; margin-bottom:8px;}
+  .gate-prompt p{font-size:13px; color:var(--ink-dim); margin-bottom:20px; line-height:1.6;}
   .pin-input-row{display:flex; gap:8px;}
   .pin-input{
     flex:1; background:var(--bg); border:1px solid var(--line); border-radius:4px; color:var(--ink);
-    font-family:'IBM Plex Mono',monospace; font-size:16px; letter-spacing:.05em; text-align:center; padding:12px; outline:none;
+    font-family:'IBM Plex Mono',monospace; font-size:15px; letter-spacing:.05em; text-align:center; padding:11px; outline:none;
   }
   .pin-input:focus{border-color:var(--accent);}
   .pin-submit{
-    background:var(--accent); color:#0b0b0a; border:none; border-radius:4px; padding:0 18px;
+    background:var(--accent); color:#0b0b0a; border:none; border-radius:4px; padding:0 16px;
     font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.05em; text-transform:uppercase; cursor:pointer;
   }
-  .pin-error{color:#e05a4a; font-size:12px; margin-top:12px; height:14px; opacity:0; transition:opacity .2s ease;}
+  .pin-error{color:#e05a4a; font-size:12px; margin-top:10px; height:14px; opacity:0; transition:opacity .2s ease;}
   .pin-error.show{opacity:1;}
-  .pin-dialog.shake{animation:shake .4s;}
-  @keyframes shake{20%{transform:translateX(-6px);}40%{transform:translateX(6px);}60%{transform:translateX(-4px);}80%{transform:translateX(4px);}100%{transform:translateX(0);}}
-  .pin-back{margin-top:18px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint);}
+  .gate-prompt.shake{animation:shake .4s;}
+  @keyframes shake{20%{transform:translateX(calc(-50% - 6px));}40%{transform:translateX(calc(-50% + 6px));}60%{transform:translateX(calc(-50% - 4px));}80%{transform:translateX(calc(-50% + 4px));}100%{transform:translateX(-50%);}}
 
-  .cs-content{opacity:0;}
-  .cs-content.revealed{opacity:1; transition:opacity .4s ease;}
-
-  @media (prefers-reduced-motion:reduce){ .pin-dialog.shake{animation:none;} .cs-content{transition:none;} }
+  @media (prefers-reduced-motion:reduce){ .gate-prompt.shake{animation:none;} .gate-wrap{transition:none;} }
 </style>
 </head>
 <body>
-
-<div class="pin-overlay" id="pinOverlay">
-  <div class="pin-dialog" id="pinDialog">
-    <div class="lock-icon">&#128274;</div>
-    <h3>This case study is protected</h3>
-    <p>Enter the PIN shared with you to view the full case study.</p>
-    <div class="pin-input-row">
-      <input type="text" inputmode="text" maxlength="20" class="pin-input" id="pinInput" placeholder="PIN" autocomplete="off">
-      <button class="pin-submit" id="pinSubmit">View</button>
-    </div>
-    <div class="pin-error" id="pinError">Incorrect PIN, try again.</div>
-    <a class="pin-back" href="index.html">&larr; Back to portfolio</a>
-  </div>
-</div>
-
-<div class="cs-content" id="csContent">
 
 <header>
   <div class="header-inner">
@@ -168,7 +152,7 @@
       <div>Release<span>2026</span></div>
       <div>Category<span>Brand Strategy, Visual Identity &amp; UI/UX Guidelines</span></div>
     </div>
-    <img class="cs-hero-img" data-src="jfit_hero.jpg" alt="JFIT brand hero visual">
+    <img class="cs-hero-img" src="jfit_hero.jpg" alt="JFIT brand hero visual">
   </div>
 </section>
 
@@ -179,7 +163,7 @@
     <h2>Moving Beyond the &ldquo;Typical Gym&rdquo; Vibe</h2>
     <p class="lead">JFIT needed to shed the traditional, high-intensity gym aesthetic to support its vision of a holistic wellness ecosystem. The core challenge was designing an adaptable visual system capable of bridging physical spaces, digital platforms, mental health coaching, and lifestyle merchandise under one cohesive brand voice.</p>
     <div class="pull-quote">&ldquo;Your wellness, connected.&rdquo;</div>
-    <img class="cs-image" data-src="jfit_challenge.jpg" alt="Current issues identified in the legacy JFIT brand">
+    <img class="cs-image" src="jfit_challenge.jpg" alt="Current issues identified in the legacy JFIT brand">
     <div class="img-caption">Current issues in the legacy brand and product</div>
   </div>
 </section>
@@ -211,7 +195,7 @@
       </tbody>
     </table>
 
-    <img class="cs-image" data-src="jfit_logo_compare.jpg" alt="JFIT old logo versus new logo comparison">
+    <img class="cs-image" src="jfit_logo_compare.jpg" alt="JFIT old logo versus new logo comparison">
     <div class="img-caption">Old logo, and the refreshed JFIT wordmark</div>
   </div>
 </section>
@@ -229,13 +213,26 @@
       <div class="swatch-item"><div class="swatch-block" style="background:#181818"></div><span>Dark Charcoal<br>#181818</span></div>
     </div>
 
-    <img class="cs-image" data-src="jfit_moodboard.jpg" alt="JFIT visual direction moodboard and color palette" style="margin-top:36px;">
+    <img class="cs-image" src="jfit_moodboard.jpg" alt="JFIT visual direction moodboard and color palette" style="margin-top:36px;">
     <div class="img-caption">Visual direction, inclusive wellness moodboard</div>
 
-    <img class="cs-image" data-src="jfit_logo_system.jpg" alt="JFIT logo variation system" style="margin-top:28px;">
+    <img class="cs-image" src="jfit_logo_system.jpg" alt="JFIT logo variation system" style="margin-top:28px;">
     <div class="img-caption">Logo construction and lockup variations</div>
   </div>
 </section>
+
+<div class="gate-wrap" id="gateWrap">
+  <div class="gate-fade"></div>
+  <div class="gate-prompt" id="gatePrompt">
+    <div class="lock-icon">&#128274;</div>
+    <h3>Continue reading</h3>
+    <p>Enter the PIN shared with you to view the Implementation section.</p>
+    <div class="pin-input-row">
+      <input type="text" inputmode="text" maxlength="20" class="pin-input" id="pinInput" placeholder="PIN" autocomplete="off">
+      <button class="pin-submit" id="pinSubmit">View</button>
+    </div>
+    <div class="pin-error" id="pinError">Incorrect PIN, try again.</div>
+  </div>
 
 <!-- Section 5: Implementation & Real-World Application -->
 <section class="cs-section">
@@ -261,29 +258,27 @@
 
 <script>
   const CORRECT_PIN = 'View@2026!';
-  const pinOverlay = document.getElementById('pinOverlay');
-  const pinDialog = document.getElementById('pinDialog');
+  const gateWrap = document.getElementById('gateWrap');
+  const gatePrompt = document.getElementById('gatePrompt');
   const pinInput = document.getElementById('pinInput');
   const pinSubmit = document.getElementById('pinSubmit');
   const pinError = document.getElementById('pinError');
-  const csContent = document.getElementById('csContent');
 
-  function revealContent(){
-    document.querySelectorAll('[data-src]').forEach(el=>{
+  function unlockGate(){
+    gateWrap.querySelectorAll('[data-src]').forEach(el=>{
       el.src = el.dataset.src;
       el.removeAttribute('data-src');
     });
-    pinOverlay.classList.add('hide');
-    csContent.classList.add('revealed');
+    gateWrap.classList.add('unlocked');
   }
 
   function tryUnlock(){
     if (pinInput.value.trim() === CORRECT_PIN) {
       sessionStorage.setItem('jk_unlocked', 'true');
-      revealContent();
+      unlockGate();
     } else {
       pinError.classList.add('show');
-      pinDialog.classList.remove('shake'); void pinDialog.offsetWidth; pinDialog.classList.add('shake');
+      gatePrompt.classList.remove('shake'); void gatePrompt.offsetWidth; gatePrompt.classList.add('shake');
       pinInput.value = '';
       pinInput.focus();
     }
@@ -292,9 +287,7 @@
   pinInput.addEventListener('keydown', e=>{ if(e.key === 'Enter') tryUnlock(); });
 
   if (sessionStorage.getItem('jk_unlocked') === 'true') {
-    revealContent();
-  } else {
-    setTimeout(()=> pinInput.focus(), 100);
+    unlockGate();
   }
 </script>
 
