@@ -24,16 +24,34 @@
 
 <style>
   :root{
-    --bg:#0b0b0a;
-    --bg-elev:#141412;
-    --bg-card:#18170f;
-    --ink:#f3f1e9;
-    --ink-dim:#9a978c;
-    --ink-faint:#5c5a51;
-    --accent:#ff6b45;
-    --accent-dim:#ff6b4522;
-    --line:#2a2924;
-    --radius:2px;
+    /* ---- Design system primitives ---- */
+    /* Neutrals */
+    --neutral-950:#08080A; --neutral-900:#0F0F12; --neutral-800:#1A1A1F; --neutral-700:#2A2A30;
+    --neutral-600:#3A3A42; --neutral-500:#5A5A65; --neutral-400:#7A7A85; --neutral-300:#A0A0A8;
+    --neutral-200:#D0D0D5; --neutral-100:#E8E8EB; --neutral-50:#F5F5F7; --neutral-0:#FFFFFF;
+    /* Electric Coral */
+    --coral-900:#4A1515; --coral-800:#7A2020; --coral-700:#B03030; --coral-600:#D94444;
+    --coral-500:#FF5C5C; --coral-400:#FF7A7A; --coral-300:#FF9E9E; --coral-200:#FFC7C7;
+    --coral-100:#FFE5E5; --coral-50:#FFF2F2;
+    /* Spacing scale */
+    --space-2:2px; --space-4:4px; --space-8:8px; --space-12:12px; --space-16:16px; --space-20:20px;
+    --space-24:24px; --space-32:32px; --space-40:40px; --space-48:48px; --space-64:64px; --space-80:80px;
+    --space-96:96px; --space-128:128px;
+    /* Radius scale */
+    --radius-none:0px; --radius-sm:4px; --radius-md:8px; --radius-lg:12px; --radius-xl:16px; --radius-2xl:24px; --radius-full:999px;
+
+    /* ---- Semantic tokens (dark theme, site default) ---- */
+    --bg:var(--neutral-950);
+    --bg-elev:var(--neutral-800);
+    --bg-card:var(--neutral-900);
+    --ink:var(--neutral-0);
+    --ink-dim:var(--neutral-200);
+    --ink-faint:var(--neutral-400);
+    --accent:var(--coral-500);
+    --accent-hover:var(--coral-400);
+    --accent-dim:var(--coral-900);
+    --line:var(--neutral-700);
+    --radius:var(--radius-sm);
     --ease:cubic-bezier(.16,.8,.24,1);        /* strong ease-out, entrances */
     --ease-in-out:cubic-bezier(.77,0,.175,1); /* strong ease-in-out, on-screen movement */
   }
@@ -141,8 +159,10 @@
   .hero-content > *{opacity:0; transform:translateY(16px); animation:heroIn .8s var(--ease) forwards;}
   .hero-content > *:nth-child(1){animation-delay:.05s;}
   .hero-content > *:nth-child(2){animation-delay:.15s;}
-  .hero-content > *:nth-child(3){animation-delay:.32s;}
-  .hero-content > *:nth-child(4){animation-delay:.48s;}
+  .hero-content > *:nth-child(3){animation-delay:.28s;}
+  .hero-content > *:nth-child(4){animation-delay:.4s;}
+  .hero-content > *:nth-child(5){animation-delay:.5s;}
+  .hero-content > *:nth-child(6){animation-delay:.6s;}
   @keyframes heroIn{to{opacity:1; transform:none;}}
   .hero-portrait img{opacity:0; animation:portraitIn 1s var(--ease) .35s forwards;}
   @keyframes portraitIn{to{opacity:1;}}
@@ -163,11 +183,34 @@
   .hero-sub b{color:var(--ink); font-weight:500;}
 
   .hero-meta{
-    margin-top:56px; display:flex; gap:56px; flex-wrap:wrap;
-    padding-top:26px; border-top:1px solid var(--line);
+    margin-top:28px; display:flex; gap:40px; flex-wrap:wrap;
+    padding-top:16px; border-top:1px solid var(--line);
   }
-  .hero-meta div{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); letter-spacing:.05em;}
-  .hero-meta div span{display:block; margin-top:6px; font-family:'Inter',sans-serif; font-size:14px; color:var(--ink); font-weight:400;}
+  .hero-meta div{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); letter-spacing:.05em;}
+  .hero-meta div span{display:block; margin-top:4px; font-family:'Inter',sans-serif; font-size:13px; color:var(--ink-dim); font-weight:400;}
+
+  /* proof badge */
+  .hero-badge{
+    display:inline-flex; align-items:center; gap:10px; border:1px solid var(--accent); border-radius:var(--radius-full);
+    padding:7px 16px 7px 12px; background:var(--accent-dim); margin-top:18px;
+  }
+  .hero-badge b{color:var(--accent); font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; line-height:1;}
+  .hero-badge span{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-dim); letter-spacing:.04em; text-transform:uppercase;}
+
+  /* primary CTA row */
+  .hero-cta-row{display:flex; align-items:center; gap:22px; margin-top:26px; flex-wrap:wrap;}
+  .btn-primary{
+    display:inline-flex; align-items:center; gap:9px; background:var(--accent); color:var(--neutral-950);
+    padding:14px 24px; border-radius:var(--radius-full); font-family:'IBM Plex Mono',monospace; font-size:12px;
+    letter-spacing:.05em; text-transform:uppercase; transition:background-color .2s ease, transform .15s ease;
+  }
+  .btn-primary:active{transform:scale(.96);}
+  @media (hover:hover) and (pointer:fine){ .btn-primary:hover{background:var(--accent-hover);} }
+  .hero-cta-secondary{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-dim); letter-spacing:.03em;
+    padding-bottom:2px; border-bottom:1px solid var(--line); transition:color .2s ease, border-color .2s ease;
+  }
+  @media (hover:hover) and (pointer:fine){ .hero-cta-secondary:hover{color:var(--accent); border-color:var(--accent);} }
 
   .hero-credit{
     position:absolute; bottom:36px; right:40px; z-index:3;
@@ -489,7 +532,7 @@
   .floating-cta-btn{
     display:flex; align-items:center; gap:10px; background:var(--accent); color:#0b0b0a; border:none; border-radius:30px;
     padding:15px 22px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.04em; text-transform:uppercase;
-    cursor:pointer; box-shadow:0 10px 30px -8px rgba(255,107,69,.5); transition:transform .2s var(--ease);
+    cursor:pointer; box-shadow:0 10px 30px -8px rgba(255,92,92,.5); transition:transform .2s var(--ease);
   }
   .floating-cta-btn:active{transform:scale(.96);}
   .floating-cta-btn svg{width:16px; height:16px;}
@@ -562,15 +605,21 @@
   <div class="grain"></div>
   <div class="hero-split">
   <div class="hero-content" style="order:1;">
-    <div class="eyebrow"><span class="dot" aria-hidden="true"></span> Joswin Kumar, Visual &amp; Branding Designer, Bengaluru</div>
-    <h1 style="text-transform:uppercase; font-size:clamp(38px,6.2vw,92px);">Build brands<br>that hold<span class="last">.</span></h1>
+    <div class="eyebrow" style="color:var(--ink-dim);"><span class="dot" aria-hidden="true"></span> JOSWIN KUMAR // VISUAL &amp; BRANDING DESIGNER // BENGALURU</div>
+    <h1 style="text-transform:uppercase; font-size:clamp(36px,5.8vw,80px);">Build brands<br>that hold<span class="last">.</span></h1>
 
-    <div style="display:flex; align-items:flex-end; gap:20px; margin-top:8px; flex-wrap:wrap;">
-      <div style="font-family:'Space Grotesk',sans-serif; font-size:clamp(50px,7vw,90px); font-weight:600; color:var(--accent); line-height:.85;">7+</div>
-      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-dim); letter-spacing:.04em; padding-bottom:8px; max-width:220px; line-height:1.5;">YEARS SHAPING BRAND SYSTEMS FOR GLOBAL TEAMS</div>
+    <p class="hero-sub" style="margin-top:20px; max-width:480px;">Brand systems built to hold together under real-world pressure, for teams at <b>Disney, Microsoft, Logitech, and Osmo</b>.</p>
+
+    <div class="hero-badge">
+      <b>7+</b>
+      <span>Years Building<br>Brand Systems</span>
     </div>
 
-    <p class="hero-sub" style="margin-top:26px;">Every brand I touch needs the same thing underneath: <b>a system that holds together</b> under real-world pressure, for teams at <b>Disney, Microsoft, Logitech, Osmo</b> and beyond.</p>
+    <div class="hero-cta-row">
+      <a href="#work" class="btn-primary">View My Work &darr;</a>
+      <a href="#contact" class="hero-cta-secondary">Let's Talk</a>
+    </div>
+
     <div class="hero-meta">
       <div>Currently<span>Graphic Designer II, GeekyAnts</span></div>
       <div>Status<span>Open to freelance &amp; full-time</span></div>
