@@ -66,7 +66,9 @@
     font-weight:500;
     letter-spacing:-.02em;
     line-height:1.02;
+    text-wrap:balance;
   }
+  p{text-wrap:pretty;}
 
   .wrap{max-width:1240px;margin:0 auto;padding:0 40px;}
   @media (max-width:720px){ .wrap{padding:0 22px;} }
@@ -266,9 +268,10 @@
   .filter-btn{
     font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
     padding:9px 16px; border:1px solid var(--line); border-radius:20px; color:var(--ink-dim);
-    background:none; cursor:pointer; transition:border-color .2s ease, color .2s ease, background-color .2s ease;
+    background:none; cursor:pointer; transition:border-color .2s ease, color .2s ease, background-color .2s ease, transform .15s ease;
   }
   .filter-btn.active{border-color:var(--accent); color:var(--accent); background:var(--accent-dim);}
+  .filter-btn:active{transform:scale(.96);}
   @media (hover:hover) and (pointer:fine){
     .filter-btn:hover{border-color:var(--ink-dim); color:var(--ink);}
   }
@@ -337,8 +340,9 @@
   @media (max-width:820px){ .project-grid{grid-template-columns:1fr;} }
   .project-card{
     position:relative; border-radius:8px; overflow:hidden; aspect-ratio:4/3; cursor:pointer;
-    border:1px solid var(--line); background:var(--bg-elev);
+    border:1px solid var(--line); background:var(--bg-elev); transition:transform .15s var(--ease);
   }
+  .project-card:active{transform:scale(.985);}
   .project-card img{width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease); display:block;}
   @media (hover:hover) and (pointer:fine){ .project-card:hover img{transform:scale(1.05);} }
   .project-card .card-overlay{
@@ -462,6 +466,7 @@
     display:flex; align-items:center; justify-content:center;
     transition:border-color .2s ease, background-color .2s ease, transform .2s ease;
   }
+  .icon-link:active{transform:scale(.92);}
   .icon-link svg{width:20px; height:20px; stroke:var(--ink); fill:none; stroke-width:1.6;}
   @media (hover:hover) and (pointer:fine){
     .icon-link:hover{border-color:var(--accent); background:var(--accent-dim); transform:translateY(-2px);}
@@ -521,7 +526,7 @@
     .hero-portrait img{animation:none !important; opacity:1;}
   }
 
-  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+  a:focus-visible, button:focus-visible, [role="button"]:focus-visible, [role="link"]:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
 </style>
 </head>
 <body>
@@ -551,6 +556,7 @@
 </header>
 
 <!-- ============ HERO ============ -->
+<main>
 <section class="hero" style="padding-top:140px;">
   <div class="hero-media" style="background:radial-gradient(ellipse 900px 600px at 78% 20%, #201812 0%, transparent 60%), radial-gradient(ellipse 700px 500px at 15% 85%, #12140f 0%, transparent 55%), var(--bg);"></div>
   <div class="grain"></div>
@@ -636,7 +642,7 @@
 
     <div class="project-grid">
       <!-- Flyn -->
-      <div class="project reveal project-card" data-project data-category="branding" data-case-study="flyn.html">
+      <div class="project reveal project-card" data-project data-category="branding" data-case-study="flyn.html" role="link" tabindex="0" aria-label="View Flyn case study">
         <img src="flyn_hero_van.jpg" alt="Flyn branded delivery van thumbnail">
         <div class="card-overlay"></div>
         <div class="card-content">
@@ -649,7 +655,7 @@
       </div>
 
       <!-- JFIT -->
-      <div class="project reveal project-card" data-project data-category="branding" data-case-study="jfit.html">
+      <div class="project reveal project-card" data-project data-category="branding" data-case-study="jfit.html" role="link" tabindex="0" aria-label="View JFIT case study">
         <img src="jfit_hero.jpg" alt="JFIT brand thumbnail">
         <div class="card-overlay"></div>
         <div class="card-content">
@@ -662,7 +668,7 @@
       </div>
 
       <!-- Talenzap -->
-      <div class="project reveal project-card" data-project data-category="branding" data-case-study="talenzap.html">
+      <div class="project reveal project-card" data-project data-category="branding" data-case-study="talenzap.html" role="link" tabindex="0" aria-label="View Talenzap case study">
         <img src="talenzap_hero.jpg" alt="Talenzap brand thumbnail">
         <div class="card-overlay"></div>
         <div class="card-content">
@@ -675,7 +681,7 @@
       </div>
 
       <!-- Forte Series -->
-      <div class="project reveal project-card" data-project data-category="campaign corporate" data-case-study="forte.html">
+      <div class="project reveal project-card" data-project data-category="campaign corporate" data-case-study="forte.html" role="link" tabindex="0" aria-label="View Forte Series case study">
         <img src="forte2_hero.jpg" alt="Forte Series brand thumbnail">
         <div class="card-overlay"></div>
         <div class="card-content">
@@ -802,23 +808,23 @@
     </div>
     <div class="reveal">
       <div class="faq-item" data-faq>
-        <div class="faq-q"><h3>Do you take freelance work alongside full-time?</h3><div class="faq-plus"></div></div>
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false"><h3>Do you take freelance work alongside full-time?</h3><div class="faq-plus"></div></div>
         <div class="faq-a"><div><p>Yes. I'm currently open to select freelance projects and collaborations alongside my full-time role, as long as timelines and scope are clear upfront.</p></div></div>
       </div>
       <div class="faq-item" data-faq>
-        <div class="faq-q"><h3>What does your design process look like?</h3><div class="faq-plus"></div></div>
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false"><h3>What does your design process look like?</h3><div class="faq-plus"></div></div>
         <div class="faq-a"><div><p>It starts with understanding the brief and the business problem behind it, then moves through strategy, exploration, and a structured system, logo, color, type, usage rules, built to scale rather than a one-off deliverable.</p></div></div>
       </div>
       <div class="faq-item" data-faq>
-        <div class="faq-q"><h3>What tools do you work in?</h3><div class="faq-plus"></div></div>
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false"><h3>What tools do you work in?</h3><div class="faq-plus"></div></div>
         <div class="faq-a"><div><p>Figma and the Adobe Creative Suite (Photoshop, Illustrator, InDesign, XD) for design, and Premiere Pro for video editing and motion work.</p></div></div>
       </div>
       <div class="faq-item" data-faq>
-        <div class="faq-q"><h3>Can you work with distributed or remote teams?</h3><div class="faq-plus"></div></div>
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false"><h3>Can you work with distributed or remote teams?</h3><div class="faq-plus"></div></div>
         <div class="faq-a"><div><p>Yes, I've managed end-to-end branding engagements for international clients across time zones, including cross-company work with partners like Microsoft and Logitech.</p></div></div>
       </div>
       <div class="faq-item" data-faq>
-        <div class="faq-q"><h3>How do you handle feedback and revisions?</h3><div class="faq-plus"></div></div>
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false"><h3>How do you handle feedback and revisions?</h3><div class="faq-plus"></div></div>
         <div class="faq-a"><div><p>I build in structured review points rather than open-ended revisions, sharing rationale alongside the work so feedback stays focused on what's actually driving the decision.</p></div></div>
       </div>
     </div>
@@ -849,6 +855,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <footer class="wrap">
   <div>© 2026 Joswin Kumar</div>
@@ -874,10 +881,18 @@
 
   // FAQ accordion
   document.querySelectorAll('[data-faq]').forEach(item=>{
-    item.querySelector('.faq-q').addEventListener('click', ()=>{
+    const q = item.querySelector('.faq-q');
+    const toggle = ()=>{
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('[data-faq].open').forEach(o=>{ if(o!==item) o.classList.remove('open'); });
+      document.querySelectorAll('[data-faq].open').forEach(o=>{
+        if(o!==item){ o.classList.remove('open'); o.querySelector('.faq-q').setAttribute('aria-expanded','false'); }
+      });
       item.classList.toggle('open', !isOpen);
+      q.setAttribute('aria-expanded', String(!isOpen));
+    };
+    q.addEventListener('click', toggle);
+    q.addEventListener('keydown', e=>{
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
     });
   });
 
@@ -901,8 +916,10 @@
   // project cards: click navigates straight to the case study (each page previews freely, then gates further in)
   document.querySelectorAll('[data-project]').forEach(p=>{
     const url = p.dataset.caseStudy;
-    p.addEventListener('click', ()=>{
-      if (url) window.location.href = url;
+    const go = ()=>{ if (url) window.location.href = url; };
+    p.addEventListener('click', go);
+    p.addEventListener('keydown', e=>{
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
     });
   });
 </script>
