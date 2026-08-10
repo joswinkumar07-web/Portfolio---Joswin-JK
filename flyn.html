@@ -13,8 +13,19 @@
 
 <style>
   :root{
-    --bg:#0b0b0a; --bg-elev:#141412; --ink:#f3f1e9; --ink-dim:#9a978c; --ink-faint:#5c5a51;
-    --accent:#ff6b45; --accent-dim:#ff6b4522; --line:#2a2924; --radius:2px;
+    /* Neutrals */
+    --neutral-950:#08080A; --neutral-900:#0F0F12; --neutral-800:#1A1A1F; --neutral-700:#2A2A30;
+    --neutral-600:#3A3A42; --neutral-500:#5A5A65; --neutral-400:#7A7A85; --neutral-300:#A0A0A8;
+    --neutral-200:#D0D0D5; --neutral-100:#E8E8EB; --neutral-50:#F5F5F7; --neutral-0:#FFFFFF;
+    /* Electric Coral */
+    --coral-900:#4A1515; --coral-800:#7A2020; --coral-700:#B03030; --coral-600:#D94444;
+    --coral-500:#FF5C5C; --coral-400:#FF7A7A; --coral-300:#FF9E9E; --coral-200:#FFC7C7;
+    --coral-100:#FFE5E5; --coral-50:#FFF2F2;
+    /* Semantic tokens (dark theme) */
+    --bg:var(--neutral-950); --bg-elev:var(--neutral-800); --ink:var(--neutral-0);
+    --ink-dim:var(--neutral-200); --ink-faint:var(--neutral-400);
+    --accent:var(--coral-500); --accent-hover:var(--coral-400); --accent-dim:var(--coral-900);
+    --line:var(--neutral-700); --radius:4px;
     --ease:cubic-bezier(.16,.8,.24,1);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
