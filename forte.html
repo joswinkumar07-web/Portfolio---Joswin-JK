@@ -7,6 +7,7 @@
 <meta name="description" content="Forte Series, Invisible Performance: Strategic Campaign & Digital Brand System. A branding case study by Joswin Kumar.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="canonical" href="https://portfolio-joswin-jk.vercel.app/forte.html">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +28,8 @@
     --ink-dim:var(--neutral-200); --ink-faint:var(--neutral-400);
     --accent:var(--coral-500); --accent-hover:var(--coral-400); --accent-dim:var(--coral-900);
     --line:var(--neutral-700); --radius:4px;
+    --space-32:32px; --space-48:48px; --space-56:56px; --space-64:64px;
+    --radius-full:999px;
     --ease:cubic-bezier(.16,.8,.24,1); --ease-in-out:cubic-bezier(.77,0,.175,1);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -57,8 +60,8 @@
   .meta-row div span{display:block; margin-top:6px; font-family:'Inter',sans-serif; font-size:14px; color:var(--ink); font-weight:400; text-transform:none; letter-spacing:0;}
   .cs-hero-img{width:100%; max-height:560px; object-fit:cover; border-radius:4px; border:1px solid var(--line);}
 
-  .cs-section{padding:56px 0;}
-  @media (max-width:720px){ .cs-section{padding:40px 0;} }
+  .cs-section{padding:var(--space-48) 0;}
+  @media (max-width:720px){ .cs-section{padding:var(--space-32) 0;} }
   .cs-section h2{font-size:clamp(28px,4vw,44px); margin-bottom:22px;}
   .cs-section h3.sub-head{font-size:19px; margin:36px 0 14px;}
   .cs-section .lead{font-size:17px; line-height:1.75; color:var(--ink-dim); max-width:680px; margin-bottom:32px;}
@@ -89,7 +92,7 @@
   footer.cs-footer a.next-project:hover{color:var(--accent);}
   footer.cs-footer a.back-all{
     margin-top:32px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase;
-    padding:12px 26px; border:1px solid var(--ink); border-radius:20px; display:inline-block; transition:background-color .2s ease, color .2s ease;
+    padding:12px 26px; border:1px solid var(--ink); border-radius:var(--radius-full); display:inline-block; transition:background-color .2s ease, color .2s ease;
   }
   footer.cs-footer a.back-all:hover{background:var(--ink); color:#0b0b0a;}
 
@@ -150,7 +153,7 @@
       <div>Release<span>2026</span></div>
       <div>Category<span>Campaign Strategy, Brand Identity &amp; Multi-Platform Creative Production</span></div>
     </div>
-    <img class="cs-hero-img" src="forte2_hero.jpg" alt="Forte Series subway billboard mockup">
+    <img class="cs-hero-img" src="forte2_hero.jpg" width="1600" height="1143" alt="Forte Series subway billboard mockup">
   </div>
 </section>
 
@@ -213,11 +216,11 @@
 
     <div class="cs-image-row" style="margin-top:36px;">
       <div>
-        <img src="forte_poster.jpg" alt="Forte Series product shot on concrete plinth">
+        <img src="forte_poster.jpg" width="1000" height="1250" alt="Forte Series product shot on concrete plinth">
         <div class="img-caption">Product shot on concrete plinth</div>
       </div>
       <div>
-        <img src="forte2_phone_desk.jpg" alt="Forte Series typography on mobile studio interface">
+        <img src="forte2_phone_desk.jpg" width="1600" height="1200" alt="Forte Series typography on mobile studio interface">
         <div class="img-caption">Typography and interface, digital touchpoint</div>
       </div>
     </div>
@@ -260,11 +263,11 @@
 
     <div class="cs-image-row" style="margin-top:8px;">
       <div>
-        <img data-src="forte2_phone_tilt.jpg" alt="Forte Series digital static poster on mobile ad interface">
+        <img data-src="forte2_phone_tilt.jpg" width="1600" height="1200" alt="Forte Series digital static poster on mobile ad interface">
         <div class="img-caption">4.1 Digital static posters, mobile ad interfaces</div>
       </div>
       <div>
-        <img data-src="forte2_busstop.jpg" alt="Forte Series subway billboard mockup at night">
+        <img data-src="forte2_busstop.jpg" width="1600" height="900" alt="Forte Series subway billboard mockup at night">
         <div class="img-caption">4.2 Real-world subway billboard application</div>
       </div>
     </div>
@@ -278,7 +281,7 @@
       <li><b>Digital &amp; Social Formats:</b> Adapted static posters into optimized mobile and display layouts (1080 &times; 1350) targeting urban professionals.</li>
       <li><b>Brand Integrity Standards:</b> Maintained strict balance between bold typographic messaging ("Clean Finish Effortlessly Achieved") and product feature callouts.</li>
     </ul>
-    <img class="cs-image" data-src="forte2_aframe.jpg" alt="Forte Series A-frame street signage mockup">
+    <img class="cs-image" data-src="forte2_aframe.jpg" width="1600" height="1067" alt="Forte Series A-frame street signage mockup">
     <div class="img-caption">Physical application, A-frame street signage</div>
   </div>
 </section>
