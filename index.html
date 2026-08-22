@@ -8,6 +8,7 @@
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="canonical" href="https://portfolio-joswin-jk.vercel.app/">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Joswin Kumar, Visual & Branding Designer">
@@ -39,6 +40,8 @@
     --space-96:96px; --space-128:128px;
     /* Radius scale */
     --radius-none:0px; --radius-sm:4px; --radius-md:8px; --radius-lg:12px; --radius-xl:16px; --radius-2xl:24px; --radius-full:999px;
+    /* Type scale (labels/meta text) */
+    --text-2xs:10px; --text-xs:11px; --text-sm:13px; --text-base:15px; --text-md:17px; --text-lg:19px; --text-xl:22px;
 
     /* ---- Semantic tokens (dark theme, site default) ---- */
     --bg:var(--neutral-950);
@@ -58,7 +61,7 @@
 
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  ::selection{background:var(--accent);color:#0b0b0a;}
+  ::selection{background:var(--accent);color:var(--bg);}
 
   body{
     background:var(--bg);
@@ -142,7 +145,7 @@
     .hero-portrait{height:380px; margin-top:32px; order:2;}
   }
 
-  .hero-media{position:absolute; inset:0; z-index:0; overflow:hidden; background:#0b0b0a;}
+  .hero-media{position:absolute; inset:0; z-index:0; overflow:hidden; background:var(--bg);}
   .hero-media video{
     position:absolute; top:50%; left:50%; min-width:100%; min-height:100%;
     width:auto; height:auto; transform:translate(-50%,-50%);
@@ -174,7 +177,10 @@
     font-size:clamp(52px,10vw,132px);
     color:var(--ink);
   }
-  .hero h1 .last{color:var(--ink-faint); -webkit-text-stroke:1px var(--ink-dim); color:transparent;}
+  .hero h1 .accent-mark{
+    display:inline-block; width:.24em; height:.24em; background:var(--accent);
+    margin-left:.12em; border-radius:2px; vertical-align:.06em;
+  }
 
   .hero-sub{
     margin-top:28px; max-width:560px;
@@ -183,19 +189,12 @@
   .hero-sub b{color:var(--ink); font-weight:500;}
 
   .hero-meta{
-    margin-top:28px; display:flex; gap:40px; flex-wrap:wrap;
-    padding-top:16px; border-top:1px solid var(--line);
+    margin-top:32px; display:flex; gap:40px; flex-wrap:wrap;
+    padding-top:18px; border-top:1px solid var(--line);
   }
-  .hero-meta div{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); letter-spacing:.05em;}
-  .hero-meta div span{display:block; margin-top:4px; font-family:'Inter',sans-serif; font-size:13px; color:var(--ink-dim); font-weight:400;}
-
-  /* proof badge */
-  .hero-badge{
-    display:inline-flex; align-items:center; gap:10px; border:1px solid var(--accent); border-radius:var(--radius-full);
-    padding:7px 16px 7px 12px; background:var(--accent-dim); margin-top:18px;
-  }
-  .hero-badge b{color:var(--accent); font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; line-height:1;}
-  .hero-badge span{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-dim); letter-spacing:.04em; text-transform:uppercase;}
+  .hero-meta div{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); letter-spacing:.05em; text-transform:uppercase;}
+  .hero-meta div span{display:block; margin-top:6px; font-family:'Inter',sans-serif; font-size:13px; color:var(--ink-dim); font-weight:400; text-transform:none; letter-spacing:0;}
+  .hero-meta div span.stat-lg{font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:600; color:var(--ink);}
 
   /* primary CTA row */
   .hero-cta-row{display:flex; align-items:center; gap:22px; margin-top:26px; flex-wrap:wrap;}
@@ -211,6 +210,9 @@
     padding-bottom:2px; border-bottom:1px solid var(--line); transition:color .2s ease, border-color .2s ease;
   }
   @media (hover:hover) and (pointer:fine){ .hero-cta-secondary:hover{color:var(--accent); border-color:var(--accent);} }
+  .hero-cta-note{
+    font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); letter-spacing:.03em; margin-top:14px;
+  }
 
   .hero-credit{
     position:absolute; bottom:36px; right:40px; z-index:3;
@@ -218,7 +220,7 @@
     color:var(--ink-dim); text-align:right; line-height:1.6;
   }
   .hero-credit b{color:var(--ink); font-weight:500;}
-  @media (max-width:720px){ .hero-credit{right:22px; bottom:22px; font-size:9px;} }
+  @media (max-width:720px){ .hero-credit{right:22px; bottom:22px; font-size:var(--text-2xs);} }
 
   /* ---------- marquee band ---------- */
   .marquee-band{
@@ -240,9 +242,9 @@
   .reveal.in{opacity:1; transform:translateY(0);}
 
   /* ---------- section shell ---------- */
-  section{position:relative; padding:88px 0;}
-  @media (max-width:720px){ section{padding:64px 0;} }
-  .section-head{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:48px; gap:24px; flex-wrap:wrap;}
+  section{position:relative; padding:var(--space-48) 0;}
+  @media (max-width:720px){ section{padding:var(--space-32) 0;} }
+  .section-head{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:var(--space-48); gap:var(--space-24); flex-wrap:wrap;}
   .section-head h2{font-size:clamp(34px,5vw,58px);}
   .section-head p{max-width:340px; color:var(--ink-dim); font-size:14px; line-height:1.6;}
 
@@ -290,7 +292,7 @@
   .project.open .chevron{transform:rotate(135deg); background:var(--accent); border-color:var(--accent);}
   .chevron svg{width:12px;height:12px;}
   .chevron path{stroke:var(--ink);}
-  .project.open .chevron path{stroke:#0b0b0a;}
+  .project.open .chevron path{stroke:var(--bg);}
 
   .project-body{
     display:grid; grid-template-rows:0fr; transition:grid-template-rows .45s var(--ease-in-out);
@@ -310,7 +312,7 @@
   .filters{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:48px;}
   .filter-btn{
     font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
-    padding:9px 16px; border:1px solid var(--line); border-radius:20px; color:var(--ink-dim);
+    padding:9px 16px; border:1px solid var(--line); border-radius:var(--radius-full); color:var(--ink-dim);
     background:none; cursor:pointer; transition:border-color .2s ease, color .2s ease, background-color .2s ease, transform .15s ease;
   }
   .filter-btn.active{border-color:var(--accent); color:var(--accent); background:var(--accent-dim);}
@@ -327,8 +329,8 @@
   }
   .project-meta-line span{white-space:nowrap;}
   .featured-badge{
-    font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:.08em; text-transform:uppercase;
-    color:var(--accent); border:1px solid var(--accent); border-radius:20px; padding:3px 9px;
+    font-family:'IBM Plex Mono',monospace; font-size:var(--text-2xs); letter-spacing:.08em; text-transform:uppercase;
+    color:var(--accent); border:1px solid var(--accent); border-radius:var(--radius-full); padding:3px 9px;
   }
 
   /* ---------- what I do (narrative pillars) ---------- */
@@ -365,7 +367,7 @@
   }
   .pin-input:focus{border-color:var(--accent);}
   .pin-submit{
-    background:var(--accent); color:#0b0b0a; border:none; border-radius:4px; padding:0 18px;
+    background:var(--accent); color:var(--bg); border:none; border-radius:4px; padding:0 18px;
     font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.05em; text-transform:uppercase; cursor:pointer;
   }
   .pin-error{color:#e05a4a; font-size:12px; margin-top:12px; height:14px; opacity:0; transition:opacity .2s ease;}
@@ -374,8 +376,8 @@
   @keyframes shake{20%{transform:translateX(-6px);}40%{transform:translateX(6px);}60%{transform:translateX(-4px);}80%{transform:translateX(4px);}100%{transform:translateX(0);}}
   .pin-close{margin-top:18px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); background:none; border:none; cursor:pointer; text-decoration:underline;}
   .lock-badge{
-    font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:.06em; text-transform:uppercase;
-    color:var(--ink-faint); border:1px solid var(--line); border-radius:20px; padding:3px 9px; display:inline-flex; align-items:center; gap:4px;
+    font-family:'IBM Plex Mono',monospace; font-size:var(--text-2xs); letter-spacing:.06em; text-transform:uppercase;
+    color:var(--ink-faint); border:1px solid var(--line); border-radius:var(--radius-full); padding:3px 9px; display:inline-flex; align-items:center; gap:4px;
   }
 
   /* ---------- project card grid (thumbnail view) ---------- */
@@ -401,8 +403,8 @@
   .project-card h3{font-size:clamp(20px,2.4vw,26px); color:var(--ink); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
   .project-card .card-sub{font-size:12px; color:var(--ink-dim); margin-top:6px;}
   .project-card .view-pill{
-    background:var(--accent); color:#0b0b0a; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.03em;
-    padding:9px 16px; border-radius:20px; white-space:nowrap; flex-shrink:0;
+    background:var(--accent); color:var(--bg); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.03em;
+    padding:9px 16px; border-radius:var(--radius-full); white-space:nowrap; flex-shrink:0;
   }
 
   /* ---------- awards ---------- */
@@ -447,7 +449,7 @@
   /* ---------- mockup presentation ---------- */
   .mockup-browser{
     border-radius:8px; overflow:hidden; border:1px solid var(--line);
-    background:#141310; box-shadow:0 30px 70px -25px rgba(0,0,0,.6);
+    background:var(--bg-card); box-shadow:0 30px 70px -25px rgba(0,0,0,.6);
   }
   .mockup-browser .bar{
     display:flex; align-items:center; gap:10px; padding:10px 14px;
@@ -457,12 +459,12 @@
   .mockup-browser .dots span{width:8px; height:8px; border-radius:50%; background:#38362c;}
   .mockup-browser .url{
     flex:1; font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint);
-    background:#0f0e0a; border-radius:20px; padding:5px 14px; text-align:center; letter-spacing:.02em;
+    background:var(--bg-card); border-radius:var(--radius-full); padding:5px 14px; text-align:center; letter-spacing:.02em;
   }
   .mockup-browser img{width:100%; display:block; border:0; border-radius:0; opacity:1 !important; transform:none !important;}
 
   .mockup-frame{
-    padding:16px; background:#141310; border:1px solid var(--line); border-radius:6px;
+    padding:16px; background:var(--bg-card); border:1px solid var(--line); border-radius:6px;
     box-shadow:0 30px 70px -25px rgba(0,0,0,.6);
   }
   .mockup-frame img{border-radius:2px; border:0; display:block; width:100%; opacity:1 !important; transform:none !important;}
@@ -474,7 +476,7 @@
 
   .plain-cap{margin-top:10px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); letter-spacing:.06em; text-transform:uppercase;}
   .role-tags{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:22px;}
-  .role-tag{font-family:'IBM Plex Mono',monospace; font-size:10px; padding:6px 10px; border:1px solid var(--line); border-radius:20px; color:var(--ink-dim); letter-spacing:.05em;}
+  .role-tag{font-family:'IBM Plex Mono',monospace; font-size:10px; padding:6px 10px; border:1px solid var(--line); border-radius:var(--radius-full); color:var(--ink-dim); letter-spacing:.05em;}
 
   /* ---------- skills ---------- */
   .skills-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:40px;}
@@ -482,7 +484,7 @@
   .skill-group .eyebrow{margin-bottom:18px;}
   .skill-list{display:flex; flex-wrap:wrap; gap:10px;}
   .skill-pill{
-    font-size:13px; padding:9px 14px; border:1px solid var(--line); border-radius:20px; color:var(--ink-dim);
+    font-size:13px; padding:9px 14px; border:1px solid var(--line); border-radius:var(--radius-full); color:var(--ink-dim);
     transition:border-color .2s ease, color .2s ease, background-color .2s ease;
   }
   @media (hover:hover) and (pointer:fine){
@@ -530,7 +532,7 @@
   }
   .floating-cta-menu a svg{width:15px; height:15px; stroke:var(--accent); fill:none; stroke-width:1.6; flex-shrink:0;}
   .floating-cta-btn{
-    display:flex; align-items:center; gap:10px; background:var(--accent); color:#0b0b0a; border:none; border-radius:30px;
+    display:flex; align-items:center; gap:10px; background:var(--accent); color:var(--bg); border:none; border-radius:30px;
     padding:15px 22px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.04em; text-transform:uppercase;
     cursor:pointer; box-shadow:0 10px 30px -8px rgba(255,92,92,.5); transition:transform .2s var(--ease);
   }
@@ -548,11 +550,11 @@
 
   .btn-resume{
     font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase;
-    padding:10px 18px; border:1px solid var(--ink); border-radius:20px; color:var(--ink);
+    padding:10px 18px; border:1px solid var(--ink); border-radius:var(--radius-full); color:var(--ink);
     transition:background-color .2s ease, color .2s ease;
   }
   @media (hover:hover) and (pointer:fine){
-    .btn-resume:hover{background:var(--ink); color:#0b0b0a;}
+    .btn-resume:hover{background:var(--ink); color:var(--bg);}
   }
 
   @media (prefers-reduced-motion:reduce){
@@ -581,7 +583,7 @@
     <a href="#contact"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 5a5.5 5.5 0 019.5 7c-2.5 4.5-9.5 9-9.5 9z"/></svg>Get in touch</a>
   </div>
   <button class="floating-cta-btn" id="floatingCtaBtn">
-    <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="#0b0b0a" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+    <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="var(--bg)" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
     <span>Hire Me</span>
   </button>
 </div>
@@ -606,27 +608,24 @@
   <div class="hero-split">
   <div class="hero-content" style="order:1;">
     <div class="eyebrow" style="color:var(--ink-dim);"><span class="dot" aria-hidden="true"></span> JOSWIN KUMAR // VISUAL &amp; BRANDING DESIGNER // BENGALURU</div>
-    <h1 style="text-transform:uppercase; font-size:clamp(36px,5.8vw,80px);">Build brands<br>that hold<span class="last">.</span></h1>
+    <h1 style="text-transform:uppercase; font-size:clamp(36px,5.8vw,80px);">Build brands<br>that hold.<span class="accent-mark"></span></h1>
 
-    <p class="hero-sub" style="margin-top:20px; max-width:480px;">Brand systems built to hold together under real-world pressure, for teams at <b>Disney, Microsoft, Logitech, and Osmo</b>.</p>
-
-    <div class="hero-badge">
-      <b>7+</b>
-      <span>Years Building<br>Brand Systems</span>
-    </div>
+    <p class="hero-sub" style="margin-top:20px; max-width:480px;">I design identity systems that survive contact with real teams, real deadlines and real production, not just the pitch deck.</p>
 
     <div class="hero-cta-row">
-      <a href="#work" class="btn-primary">View My Work &darr;</a>
-      <a href="#contact" class="hero-cta-secondary">Let's Talk</a>
+      <a href="#work" class="btn-primary">See Case Studies &darr;</a>
+      <a href="https://calendar.app.google/4v4HKDfdSJb7qUk27" target="_blank" rel="noopener" class="hero-cta-secondary">Book a 20-min intro call &#8599;</a>
     </div>
+    <div class="hero-cta-note">Free, no pitch. Usually replies within 24 hours.</div>
 
     <div class="hero-meta">
+      <div>Experience<span class="stat-lg">7+ years</span></div>
       <div>Currently<span>Graphic Designer II, GeekyAnts</span></div>
       <div>Status<span>Open to freelance &amp; full-time</span></div>
     </div>
   </div>
   <div class="hero-portrait">
-    <img src="hero_portrait.png" alt="Joswin Kumar portrait">
+    <img src="hero_portrait.png" alt="Joswin Kumar portrait" width="807" height="952">
   </div>
   </div>
 </section>
@@ -638,7 +637,7 @@
   </div>
 </div>
 
-<section id="what-i-do" style="padding-top:64px; padding-bottom:64px;">
+<section id="what-i-do">
   <div class="wrap">
     <div class="section-head reveal" style="margin-bottom:48px;">
       <h2>What I Can<br>Help You With</h2>
@@ -692,7 +691,7 @@
     <div class="project-grid">
       <!-- Flyn -->
       <div class="project reveal project-card" data-project data-category="branding" data-case-study="flyn.html" role="link" tabindex="0" aria-label="View Flyn case study">
-        <img src="flyn_hero_van.jpg" alt="Flyn branded delivery van thumbnail">
+        <img src="flyn_hero_van.jpg" alt="Flyn branded delivery van thumbnail" width="1800" height="1200">
         <div class="card-overlay"></div>
         <div class="card-content">
           <div>
@@ -705,7 +704,7 @@
 
       <!-- JFIT -->
       <div class="project reveal project-card" data-project data-category="branding" data-case-study="jfit.html" role="link" tabindex="0" aria-label="View JFIT case study">
-        <img src="jfit_hero.jpg" alt="JFIT brand thumbnail">
+        <img src="jfit_hero.jpg" alt="JFIT brand thumbnail" width="1800" height="1800">
         <div class="card-overlay"></div>
         <div class="card-content">
           <div>
@@ -718,7 +717,7 @@
 
       <!-- Talenzap -->
       <div class="project reveal project-card" data-project data-category="branding" data-case-study="talenzap.html" role="link" tabindex="0" aria-label="View Talenzap case study">
-        <img src="talenzap_hero.jpg" alt="Talenzap brand thumbnail">
+        <img src="talenzap_hero.jpg" alt="Talenzap brand thumbnail" width="1600" height="1200">
         <div class="card-overlay"></div>
         <div class="card-content">
           <div>
@@ -731,7 +730,7 @@
 
       <!-- Forte Series -->
       <div class="project reveal project-card" data-project data-category="campaign corporate" data-case-study="forte.html" role="link" tabindex="0" aria-label="View Forte Series case study">
-        <img src="forte2_hero.jpg" alt="Forte Series brand thumbnail">
+        <img src="forte2_hero.jpg" alt="Forte Series brand thumbnail" width="1600" height="1143">
         <div class="card-overlay"></div>
         <div class="card-content">
           <div>
