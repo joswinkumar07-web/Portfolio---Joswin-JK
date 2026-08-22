@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Flyn, Instant Fashion Delivery Brand Refresh, Joswin Kumar</title>
 <meta name="description" content="Flyn, Instant Fashion Delivery Brand Refresh. A branding case study by Joswin Kumar.">
-<link rel="icon" type="image/jpeg" href="forte_poster.jpg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="canonical" href="https://portfolio-joswin-jk.vercel.app/flyn.html">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +28,8 @@
     --ink-dim:var(--neutral-200); --ink-faint:var(--neutral-400);
     --accent:var(--coral-500); --accent-hover:var(--coral-400); --accent-dim:var(--coral-900);
     --line:var(--neutral-700); --radius:4px;
+    --space-32:32px; --space-48:48px; --space-56:56px; --space-64:64px;
+    --radius-full:999px;
     --ease:cubic-bezier(.16,.8,.24,1);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -57,8 +61,8 @@
   .cs-hero-img{width:100%; border-radius:4px; border:1px solid var(--line);}
 
   /* content sections */
-  .cs-section{padding:56px 0;}
-  @media (max-width:720px){ .cs-section{padding:40px 0;} }
+  .cs-section{padding:var(--space-48) 0;}
+  @media (max-width:720px){ .cs-section{padding:var(--space-32) 0;} }
   .cs-section h2{font-size:clamp(28px,4vw,44px); margin-bottom:22px;}
   .cs-section .lead{font-size:17px; line-height:1.75; color:var(--ink-dim); max-width:680px; margin-bottom:32px;}
   .pull-quote{
@@ -86,7 +90,7 @@
   footer.cs-footer a.next-project:hover{color:var(--accent);}
   footer.cs-footer a.back-all{
     margin-top:32px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase;
-    padding:12px 26px; border:1px solid var(--ink); border-radius:20px; display:inline-block; transition:background-color .2s ease, color .2s ease;
+    padding:12px 26px; border:1px solid var(--ink); border-radius:var(--radius-full); display:inline-block; transition:background-color .2s ease, color .2s ease;
   }
   footer.cs-footer a.back-all:hover{background:var(--ink); color:#0b0b0a;}
 
@@ -146,7 +150,7 @@
       <div>Release<span>July 2025</span></div>
       <div>Category<span>Brand Identity / E-commerce</span></div>
     </div>
-    <img class="cs-hero-img" src="flyn_hero_van.jpg" alt="Flyn branded delivery van">
+    <img class="cs-hero-img" src="flyn_hero_van.jpg" width="1800" height="1200" alt="Flyn branded delivery van">
   </div>
 </section>
 
@@ -187,7 +191,7 @@
     <h2>Crafting the Visual System</h2>
     <p class="lead">Our creative team defined a precise, scalable system anchored by custom typography (Debra &amp; Poppins) and rigorous clear-space specifications, a 17px margin buffer rule applied consistently across every lockup.</p>
     <p class="lead">We developed a tiered logo framework to adapt across various screen sizes and physical assets, eliminating brand misuse across marketing and product interfaces.</p>
-    <img class="cs-image" src="flyn_visual_system.jpg" alt="Flyn logo grid system and packaging mockup">
+    <img class="cs-image" src="flyn_visual_system.jpg" width="1800" height="1013" alt="Flyn logo grid system and packaging mockup">
     <div class="img-caption">Logo construction grid, and in-store packaging locker mockup</div>
   </div>
 </section>
@@ -213,11 +217,11 @@
     <p class="lead">The refreshed visual system elevated Flyn's market presence, establishing a premium yet accessible brand identity. With standardized guidelines and standardized UI components, Flyn achieved complete visual consistency across all customer touchpoints, solidifying its position as a fast-fashion delivery pioneer.</p>
     <div class="cs-image-row">
       <div>
-        <img data-src="flyn_impact_extra.jpg" alt="Flyn brand application">
+        <img data-src="flyn_impact_extra.jpg" width="1400" height="1050" alt="Flyn brand application">
         <div class="img-caption">Brand application</div>
       </div>
       <div>
-        <img data-src="flyn_impact_iphone.jpg" alt="Flyn mobile app icon on home screen">
+        <img data-src="flyn_impact_iphone.jpg" width="1400" height="1083" alt="Flyn mobile app icon on home screen">
         <div class="img-caption">Mobile app launch icon</div>
       </div>
     </div>
